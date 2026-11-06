@@ -1,0 +1,179 @@
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix bst:   <https://github.com/josaum/brasil-stanag-ontology/ns#> .
+@prefix br:    <https://github.com/josaum/brasil-stanag-ontology/br#> .
+@prefix st:    <https://github.com/josaum/brasil-stanag-ontology/stanag#> .
+
+# =============================================================================
+# Brasil ↔ STANAG — mapeamento SKOS com proveniência (fontes abertas)
+# Trabalho independente. Sem aval da OTAN, do Ministério da Defesa ou de
+# qualquer órgão. Os STANAGs são descritos apenas por número, título e
+# publicação aliada (AxxP) PÚBLICOS; o texto integral não foi consultado.
+# =============================================================================
+
+<https://github.com/josaum/brasil-stanag-ontology> a owl:Ontology ;
+    dct:title "Brasil–STANAG: mapeamento SKOS entre normas brasileiras e acordos de padronização da OTAN"@pt-BR ,
+              "Brazil–STANAG: SKOS mapping between Brazilian regulations and NATO standardization agreements"@en ;
+    dct:creator "Dionisio Chiuratto Agourakis" ;
+    dct:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dct:created "2026-11-06"^^xsd:date ;
+    owl:versionInfo "0.1.0" ;
+    rdfs:comment "Somente fontes abertas. Mapeamentos são propostas de correspondência (skos:relatedMatch/closeMatch), nunca equivalência oficial."@pt-BR .
+
+# -----------------------------------------------------------------------------
+# Vocabulário do mapeamento
+# -----------------------------------------------------------------------------
+bst:Mapeamento a owl:Class ;
+    rdfs:label "Mapeamento Brasil–STANAG"@pt-BR ;
+    rdfs:comment "Uma correspondência proposta entre um conceito/norma brasileira e um STANAG, com relação SKOS, fontes e status de verificação."@pt-BR .
+
+bst:conceitoBrasileiro a owl:ObjectProperty ; rdfs:domain bst:Mapeamento .
+bst:conceitoSTANAG     a owl:ObjectProperty ; rdfs:domain bst:Mapeamento .
+bst:relacao            a owl:ObjectProperty ; rdfs:domain bst:Mapeamento ;
+    rdfs:comment "Uma das propriedades de mapeamento SKOS (skos:relatedMatch, skos:closeMatch, skos:broadMatch, skos:narrowMatch)."@pt-BR .
+bst:status             a owl:DatatypeProperty ; rdfs:domain bst:Mapeamento ;
+    rdfs:comment "'verificado' = número/título do STANAG e norma brasileira confirmados em fonte pública; 'a-confirmar' = falta confirmação de algum elemento."@pt-BR .
+bst:numero             a owl:DatatypeProperty .
+bst:publicacaoAliada   a owl:DatatypeProperty .
+bst:area               a owl:DatatypeProperty .
+
+bst:STANAG a owl:Class ; rdfs:label "Acordo de padronização da OTAN (STANAG)"@pt-BR .
+bst:NormaBrasileira a owl:Class ; rdfs:label "Norma, sistema ou conceito brasileiro"@pt-BR .
+
+# -----------------------------------------------------------------------------
+# STANAGs (apenas metadados públicos)
+# -----------------------------------------------------------------------------
+st:STANAG3150 a bst:STANAG ; bst:numero "3150" ; bst:area "codificacao" ;
+    skos:prefLabel "Codification — Uniform System of Supply Classification"@en ; bst:publicacaoAliada "ACodP-1" .
+st:STANAG3151 a bst:STANAG ; bst:numero "3151" ; bst:area "codificacao" ;
+    skos:prefLabel "Codification — Uniform System of Item Identification"@en ; bst:publicacaoAliada "ACodP-1" .
+st:STANAG4177 a bst:STANAG ; bst:numero "4177" ; bst:area "codificacao" ;
+    skos:prefLabel "Codification — Uniform System of Data Acquisition"@en ; bst:publicacaoAliada "ACodP-1" .
+
+st:STANAG2021 a bst:STANAG ; bst:numero "2021" ; bst:area "mobilidade" ;
+    skos:prefLabel "Military Load Classification of Bridges, Ferries, Rafts and Vehicles"@en .
+st:STANAG2468 a bst:STANAG ; bst:numero "2468" ; bst:area "mobilidade" ;
+    skos:prefLabel "Technical Aspects of the Transport of Military Materials by Railroad"@en ; bst:publicacaoAliada "AMovP-4" .
+st:STANAG2174 a bst:STANAG ; bst:numero "2174" ; bst:area "mobilidade" ;
+    skos:prefLabel "Military Routes and Route/Road Networks"@en ; bst:publicacaoAliada "AMovP-1" .
+
+st:STANAG2211 a bst:STANAG ; bst:numero "2211" ; bst:area "geoespacial" ;
+    skos:prefLabel "Geodetic Datums, Projections, Grids and Grid References"@en ; bst:publicacaoAliada "AGeoP-21" .
+
+st:STANAG4774 a bst:STANAG ; bst:numero "4774" ; bst:area "confidencialidade" ;
+    skos:prefLabel "Confidentiality Metadata Label Syntax"@en ; bst:publicacaoAliada "ADatP-4774" .
+st:STANAG4778 a bst:STANAG ; bst:numero "4778" ; bst:area "confidencialidade" ;
+    skos:prefLabel "Metadata Binding Mechanism"@en ; bst:publicacaoAliada "ADatP-4778" .
+
+st:STANAG4569 a bst:STANAG ; bst:numero "4569" ; bst:area "protecao-blindados" ;
+    skos:prefLabel "Protection Levels for Occupants of Armoured Vehicles"@en ; bst:publicacaoAliada "AEP-55" .
+
+# Arquitetura/interoperabilidade (não são STANAGs numerados aqui; descritos à parte)
+st:NAFv4 a bst:STANAG ; bst:area "arquitetura" ;
+    skos:prefLabel "NATO Architecture Framework, version 4 (NAF v4)"@en ;
+    rdfs:comment "Framework de arquitetura da OTAN; não confundir com a ADatP-34."@pt-BR .
+st:ADatP34 a bst:STANAG ; bst:area "arquitetura" ;
+    skos:prefLabel "NATO Interoperability Standards and Profiles (NISP)"@en ; bst:publicacaoAliada "ADatP-34" .
+st:MIM a bst:STANAG ; bst:area "arquitetura" ;
+    skos:prefLabel "MIP Information Model (MIM)"@en ;
+    rdfs:comment "Modelo do Multilateral Interoperability Programme (MIP), sucessor do JC3IEDM. O MIP é um programa multinacional, não um órgão da OTAN."@pt-BR .
+
+# -----------------------------------------------------------------------------
+# Normas e sistemas brasileiros
+# -----------------------------------------------------------------------------
+br:SISCADE a bst:NormaBrasileira ;
+    skos:prefLabel "Sistema de Catalogação de Defesa (SISCADE) — Ministério da Defesa"@pt-BR ;
+    rdfs:comment "Brasil participa do NATO Codification System como país Tier 2 (desde 2002, segundo fontes do Ministério da Defesa)."@pt-BR .
+br:RENAVAM a bst:NormaBrasileira ;
+    skos:prefLabel "Registro Nacional de Veículos Automotores (RENAVAM) — código marca/modelo/versão"@pt-BR .
+br:CTB_art120_par2 a bst:NormaBrasileira ;
+    skos:prefLabel "CTB (Lei 9.503/1997), art. 120, §2º — veículo de uso bélico dispensado de registro"@pt-BR ;
+    dct:source <https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm> .
+br:SINAMOB a bst:NormaBrasileira ;
+    skos:prefLabel "Sistema Nacional de Mobilização (Lei 11.631/2007)"@pt-BR ;
+    dct:source <https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/lei/l11631.htm> .
+br:NBR7188 a bst:NormaBrasileira ;
+    skos:prefLabel "ABNT NBR 7188 — carga móvel rodoviária em pontes (trem-tipo)"@pt-BR .
+br:MalhaFerroviaria a bst:NormaBrasileira ;
+    skos:prefLabel "Inventário da malha ferroviária federal (bitola, carga por eixo, gabarito)"@pt-BR .
+br:SNV a bst:NormaBrasileira ;
+    skos:prefLabel "Sistema Nacional de Viação — rede rodoviária federal"@pt-BR .
+br:SIRGAS2000 a bst:NormaBrasileira ;
+    skos:prefLabel "SIRGAS2000 — referencial geodésico oficial do Brasil (IBGE)"@pt-BR .
+br:LAI_Decreto7845 a bst:NormaBrasileira ;
+    skos:prefLabel "Classificação de informação: Lei 12.527/2011 (LAI) e Decreto 7.845/2012"@pt-BR ;
+    dct:source <https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm> ,
+               <https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/decreto/d7845.htm> .
+br:ICPBrasil a bst:NormaBrasileira ;
+    skos:prefLabel "Infraestrutura de Chaves Públicas Brasileira (ICP-Brasil)"@pt-BR .
+br:NBR15000 a bst:NormaBrasileira ;
+    skos:prefLabel "ABNT NBR 15000 — blindagens para impactos balísticos"@pt-BR .
+br:Decreto10030 a bst:NormaBrasileira ;
+    skos:prefLabel "Decreto 10.030/2019 — Regulamento de Produtos Controlados (Exército)"@pt-BR ;
+    dct:source <https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/decreto/d10030.htm> .
+br:ePING a bst:NormaBrasileira ;
+    skos:prefLabel "e-PING — Padrões de Interoperabilidade de Governo Eletrônico"@pt-BR .
+
+# -----------------------------------------------------------------------------
+# Mapeamentos
+# -----------------------------------------------------------------------------
+bst:m01 a bst:Mapeamento ; bst:conceitoBrasileiro br:SISCADE ; bst:conceitoSTANAG st:STANAG3150 ;
+    bst:relacao skos:closeMatch ; bst:status "verificado" ;
+    rdfs:comment "O SISCADE implementa no Brasil a classificação de suprimentos do NCS."@pt-BR ;
+    dct:source "Catálogo público NSO (título do STANAG); páginas do Ministério da Defesa sobre catalogação." .
+bst:m02 a bst:Mapeamento ; bst:conceitoBrasileiro br:SISCADE ; bst:conceitoSTANAG st:STANAG3151 ;
+    bst:relacao skos:closeMatch ; bst:status "verificado" ;
+    dct:source "Catálogo público NSO; Ministério da Defesa (catalogação)." .
+bst:m03 a bst:Mapeamento ; bst:conceitoBrasileiro br:RENAVAM ; bst:conceitoSTANAG st:STANAG3151 ;
+    bst:relacao skos:relatedMatch ; bst:status "verificado" ;
+    rdfs:comment "Proposta: correspondência opcional código RENAVAM ↔ NSN (NCS Grupo 23) para veículos não bélicos usados por órgãos de defesa."@pt-BR ;
+    dct:source "Contribuição BN03-C01 ao Brasil Participativo (proposta 181303)." .
+bst:m04 a bst:Mapeamento ; bst:conceitoBrasileiro br:CTB_art120_par2 ; bst:conceitoSTANAG st:STANAG3151 ;
+    bst:relacao skos:relatedMatch ; bst:status "verificado" ;
+    rdfs:comment "Limite de escopo: veículos de uso bélico ficam fora do SNT; sua catalogação é feita pelas Forças."@pt-BR ;
+    dct:source <https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm> .
+bst:m05 a bst:Mapeamento ; bst:conceitoBrasileiro br:NBR7188 ; bst:conceitoSTANAG st:STANAG2021 ;
+    bst:relacao skos:relatedMatch ; bst:status "verificado" ;
+    rdfs:comment "Ambos classificam carga em pontes, mas com métodos diferentes; não há conversão oficial."@pt-BR ;
+    dct:source "Catálogo público NSO; ABNT." .
+bst:m06 a bst:Mapeamento ; bst:conceitoBrasileiro br:MalhaFerroviaria ; bst:conceitoSTANAG st:STANAG2468 ;
+    bst:relacao skos:relatedMatch ; bst:status "verificado" ;
+    dct:source "Catálogo público NSO; Plano Setorial de Transporte Ferroviário (consulta pública MPOR, 2026)." .
+bst:m07 a bst:Mapeamento ; bst:conceitoBrasileiro br:SNV ; bst:conceitoSTANAG st:STANAG2174 ;
+    bst:relacao skos:relatedMatch ; bst:status "verificado" ;
+    dct:source "Catálogo público NSO; Plano Setorial de Transporte Rodoviário (consulta pública MPOR, 2026)." .
+bst:m08 a bst:Mapeamento ; bst:conceitoBrasileiro br:SINAMOB ; bst:conceitoSTANAG st:STANAG2174 ;
+    bst:relacao skos:relatedMatch ; bst:status "verificado" ;
+    dct:source <https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/lei/l11631.htm> .
+bst:m09 a bst:Mapeamento ; bst:conceitoBrasileiro br:SIRGAS2000 ; bst:conceitoSTANAG st:STANAG2211 ;
+    bst:relacao skos:relatedMatch ; bst:status "verificado" ;
+    rdfs:comment "STANAG 2211 adota WGS 84; SIRGAS2000 e WGS 84 são compatíveis no nível métrico, com transformação documentada para alta precisão."@pt-BR ;
+    dct:source "Catálogo público NSO; IBGE (SIRGAS2000)." .
+bst:m10 a bst:Mapeamento ; bst:conceitoBrasileiro br:LAI_Decreto7845 ; bst:conceitoSTANAG st:STANAG4774 ;
+    bst:relacao skos:relatedMatch ; bst:status "verificado" ;
+    rdfs:comment "Relaciona apenas o MECANISMO de rotulagem. Não há equivalência oficial entre graus de sigilo brasileiros e da OTAN."@pt-BR ;
+    dct:source <https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/decreto/d7845.htm> .
+bst:m11 a bst:Mapeamento ; bst:conceitoBrasileiro br:ICPBrasil ; bst:conceitoSTANAG st:STANAG4778 ;
+    bst:relacao skos:relatedMatch ; bst:status "verificado" ;
+    rdfs:comment "Assinatura ICP-Brasil como possível mecanismo de vínculo criptográfico de rótulos."@pt-BR ;
+    dct:source "Catálogo público NSO; ITI (ICP-Brasil)." .
+bst:m12 a bst:Mapeamento ; bst:conceitoBrasileiro br:NBR15000 ; bst:conceitoSTANAG st:STANAG4569 ;
+    bst:relacao skos:relatedMatch ; bst:status "verificado" ;
+    rdfs:comment "NBR 15000 é para blindagem em geral (inclusive civil); STANAG 4569 é para ocupantes de viaturas militares. Níveis não são equivalentes."@pt-BR ;
+    dct:source "Catálogo público NSO; ABNT." .
+bst:m13 a bst:Mapeamento ; bst:conceitoBrasileiro br:Decreto10030 ; bst:conceitoSTANAG st:STANAG4569 ;
+    bst:relacao skos:relatedMatch ; bst:status "verificado" ;
+    rdfs:comment "Blindagem é produto controlado pelo Exército no Brasil."@pt-BR ;
+    dct:source <https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/decreto/d10030.htm> .
+bst:m14 a bst:Mapeamento ; bst:conceitoBrasileiro br:ePING ; bst:conceitoSTANAG st:ADatP34 ;
+    bst:relacao skos:relatedMatch ; bst:status "a-confirmar" ;
+    rdfs:comment "Ambos são catálogos de padrões de interoperabilidade; correspondência apenas temática."@pt-BR ;
+    dct:source "Governo Digital (e-PING); NSO (ADatP-34)." .
+bst:m15 a bst:Mapeamento ; bst:conceitoBrasileiro br:SINAMOB ; bst:conceitoSTANAG st:NAFv4 ;
+    bst:relacao skos:relatedMatch ; bst:status "a-confirmar" ;
+    rdfs:comment "Hipótese de trabalho: NAF v4 como linguagem para descrever a arquitetura de mobilização."@pt-BR ;
+    dct:source "NATO (NAF v4, documento público)." .

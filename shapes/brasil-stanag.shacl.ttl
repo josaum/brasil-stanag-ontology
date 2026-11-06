@@ -1,0 +1,29 @@
+@prefix sh:   <http://www.w3.org/ns/shacl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix bst:  <https://github.com/josaum/brasil-stanag-ontology/ns#> .
+
+bst:MapeamentoShape a sh:NodeShape ;
+    sh:targetClass bst:Mapeamento ;
+    sh:property [ sh:path bst:conceitoBrasileiro ; sh:class bst:NormaBrasileira ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:message "Cada mapeamento precisa de exatamente um conceito brasileiro." ] ;
+    sh:property [ sh:path bst:conceitoSTANAG ; sh:class bst:STANAG ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:message "Cada mapeamento precisa de exatamente um conceito STANAG." ] ;
+    sh:property [ sh:path bst:relacao ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:in ( skos:relatedMatch skos:closeMatch skos:broadMatch skos:narrowMatch ) ;
+                  sh:message "Relação deve ser skos:relatedMatch, closeMatch, broadMatch ou narrowMatch (exactMatch não é permitido: não há equivalência oficial)." ] ;
+    sh:property [ sh:path bst:status ; sh:minCount 1 ; sh:maxCount 1 ; sh:in ( "verificado" "a-confirmar" ) ;
+                  sh:message "Status deve ser 'verificado' ou 'a-confirmar'." ] ;
+    sh:property [ sh:path dct:source ; sh:minCount 1 ;
+                  sh:message "Cada mapeamento precisa de ao menos uma fonte." ] .
+
+bst:STANAGShape a sh:NodeShape ;
+    sh:targetClass bst:STANAG ;
+    sh:property [ sh:path skos:prefLabel ; sh:minCount 1 ; sh:message "Todo STANAG precisa de título público." ] ;
+    sh:property [ sh:path bst:area ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:in ( "codificacao" "mobilidade" "geoespacial" "confidencialidade" "protecao-blindados" "arquitetura" ) ] .
+
+bst:NormaShape a sh:NodeShape ;
+    sh:targetClass bst:NormaBrasileira ;
+    sh:property [ sh:path skos:prefLabel ; sh:minCount 1 ] .

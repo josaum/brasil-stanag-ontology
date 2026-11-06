@@ -1,0 +1,19 @@
+# Mapeamentos (gerado por `scripts/validate.py`)
+
+| ID | Conceito brasileiro | Relação SKOS | STANAG / referência | Status | Nota |
+|---|---|---|---|---|---|
+| m01 | Sistema de Catalogação de Defesa (SISCADE) — Ministério da Defesa | closeMatch | STANAG 3150 — Codification — Uniform System of Supply Classification (ACodP-1) | verificado | O SISCADE implementa no Brasil a classificação de suprimentos do NCS. |
+| m02 | Sistema de Catalogação de Defesa (SISCADE) — Ministério da Defesa | closeMatch | STANAG 3151 — Codification — Uniform System of Item Identification (ACodP-1) | verificado |  |
+| m03 | Registro Nacional de Veículos Automotores (RENAVAM) — código marca/modelo/versão | relatedMatch | STANAG 3151 — Codification — Uniform System of Item Identification (ACodP-1) | verificado | Proposta: correspondência opcional código RENAVAM ↔ NSN (NCS Grupo 23) para veículos não bélicos usados por órgãos de defesa. |
+| m04 | CTB (Lei 9.503/1997), art. 120, §2º — veículo de uso bélico dispensado de registro | relatedMatch | STANAG 3151 — Codification — Uniform System of Item Identification (ACodP-1) | verificado | Limite de escopo: veículos de uso bélico ficam fora do SNT; sua catalogação é feita pelas Forças. |
+| m05 | ABNT NBR 7188 — carga móvel rodoviária em pontes (trem-tipo) | relatedMatch | STANAG 2021 — Military Load Classification of Bridges, Ferries, Rafts and Vehicles | verificado | Ambos classificam carga em pontes, mas com métodos diferentes; não há conversão oficial. |
+| m06 | Inventário da malha ferroviária federal (bitola, carga por eixo, gabarito) | relatedMatch | STANAG 2468 — Technical Aspects of the Transport of Military Materials by Railroad (AMovP-4) | verificado |  |
+| m07 | Sistema Nacional de Viação — rede rodoviária federal | relatedMatch | STANAG 2174 — Military Routes and Route/Road Networks (AMovP-1) | verificado |  |
+| m08 | Sistema Nacional de Mobilização (Lei 11.631/2007) | relatedMatch | STANAG 2174 — Military Routes and Route/Road Networks (AMovP-1) | verificado |  |
+| m09 | SIRGAS2000 — referencial geodésico oficial do Brasil (IBGE) | relatedMatch | STANAG 2211 — Geodetic Datums, Projections, Grids and Grid References (AGeoP-21) | verificado | STANAG 2211 adota WGS 84; SIRGAS2000 e WGS 84 são compatíveis no nível métrico, com transformação documentada para alta precisão. |
+| m10 | Classificação de informação: Lei 12.527/2011 (LAI) e Decreto 7.845/2012 | relatedMatch | STANAG 4774 — Confidentiality Metadata Label Syntax (ADatP-4774) | verificado | Relaciona apenas o MECANISMO de rotulagem. Não há equivalência oficial entre graus de sigilo brasileiros e da OTAN. |
+| m11 | Infraestrutura de Chaves Públicas Brasileira (ICP-Brasil) | relatedMatch | STANAG 4778 — Metadata Binding Mechanism (ADatP-4778) | verificado | Assinatura ICP-Brasil como possível mecanismo de vínculo criptográfico de rótulos. |
+| m12 | ABNT NBR 15000 — blindagens para impactos balísticos | relatedMatch | STANAG 4569 — Protection Levels for Occupants of Armoured Vehicles (AEP-55) | verificado | NBR 15000 é para blindagem em geral (inclusive civil); STANAG 4569 é para ocupantes de viaturas militares. Níveis não são equivalentes. |
+| m13 | Decreto 10.030/2019 — Regulamento de Produtos Controlados (Exército) | relatedMatch | STANAG 4569 — Protection Levels for Occupants of Armoured Vehicles (AEP-55) | verificado | Blindagem é produto controlado pelo Exército no Brasil. |
+| m14 | e-PING — Padrões de Interoperabilidade de Governo Eletrônico | relatedMatch | NATO Interoperability Standards and Profiles (NISP) (ADatP-34) | a-confirmar | Ambos são catálogos de padrões de interoperabilidade; correspondência apenas temática. |
+| m15 | Sistema Nacional de Mobilização (Lei 11.631/2007) | relatedMatch | NATO Architecture Framework, version 4 (NAF v4) | a-confirmar | Hipótese de trabalho: NAF v4 como linguagem para descrever a arquitetura de mobilização. |

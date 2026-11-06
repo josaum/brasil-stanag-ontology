@@ -1,0 +1,6 @@
+[project]
+name = "brasil-stanag-ontology"
+version = "0.1.0"
+description = "Mapeamento SKOS entre normas brasileiras e STANAGs (fontes abertas)"
+requires-python = ">=3.10"
+dependencies = ["rdflib>=7.0", "pyshacl>=0.26"]
