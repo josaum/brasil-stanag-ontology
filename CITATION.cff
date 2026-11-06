@@ -4,7 +4,7 @@ title: "Brasil–STANAG: mapeamento SKOS entre normas brasileiras e STANAGs"
 authors:
   - family-names: Agourakis
     given-names: Dionisio Chiuratto
-version: 0.1.0
+version: 0.2.0
 date-released: 2026-11-06
 license: CC-BY-4.0
 repository-code: "https://github.com/josaum/brasil-stanag-ontology"

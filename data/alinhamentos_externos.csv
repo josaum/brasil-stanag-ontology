@@ -1,0 +1,57 @@
+local|relacao|externo|nota
+br:Guarani|broadMatch|cco:ont00000467|CCO: Armored Personnel Carrier
+br:IA2|broadMatch|cco:ont00000445|CCO: Weapon
+br:AstrosII|broadMatch|cco:ont00000445|CCO: Weapon
+br:C390|broadMatch|cco:ont00001043|CCO: Aircraft
+st:FSC2350|relatedMatch|cco:ont00000427|CCO: Armored Fighting Vehicle (a classe FSC inclui veículos táticos não blindados)
+st:FSC2355|relatedMatch|cco:ont00000427|CCO: Armored Fighting Vehicle (idem)
+st:FSC23|relatedMatch|cco:ont00000618|CCO: Ground Vehicle
+st:FSC22|relatedMatch|cco:ont00000796|CCO: Rail Transport Vehicle
+st:FSC15|relatedMatch|cco:ont00001043|CCO: Aircraft
+st:FSC19|relatedMatch|cco:ont00000440|CCO: Watercraft
+st:FSC10|relatedMatch|cco:ont00000445|CCO: Weapon
+st:FSC13|relatedMatch|cco:ont00001150|CCO: Portion of Ammunition
+st:FSC13|relatedMatch|cco:ont00000552|CCO: Explosive Weapon
+st:FSC91|relatedMatch|cco:ont00001135|CCO: Portion of Liquid Fuel
+st:FSC58|relatedMatch|cco:ont00000903|CCO: Radio Communication Instrument
+st:STANAG4172|relatedMatch|cco:ont00001003|CCO: Cartridge
+st:STANAG2310|relatedMatch|cco:ont00001003|CCO: Cartridge
+st:STANAG4090|relatedMatch|cco:ont00001003|CCO: Cartridge
+st:STANAG4383|relatedMatch|cco:ont00001003|CCO: Cartridge
+st:MLC|relatedMatch|cco:ont00001099|CCO: Bridge
+st:STANAG2174|relatedMatch|cco:ont00000247|CCO: Road
+br:SNV|relatedMatch|cco:ont00000247|CCO: Road
+st:STANAG2468|relatedMatch|cco:ont00000456|CCO: Railway
+br:MalhaFerroviaria|relatedMatch|cco:ont00000456|CCO: Railway
+br:SIRGAS2000|broadMatch|cco:ont00000469|CCO: Geospatial Coordinate Reference System
+st:WGS84|broadMatch|cco:ont00000469|CCO: Geospatial Coordinate Reference System
+br:SIRGAS2000|exactMatch|epsg:4674|Registro EPSG: SIRGAS 2000 (conferido em opengis.net)
+st:WGS84|exactMatch|epsg:4326|Registro EPSG: WGS 84
+st:NSN|broadMatch|cco:ont00000077|CCO: Code Identifier
+st:NCAGE|broadMatch|cco:ont00000077|CCO: Code Identifier
+br:RENAVAM|broadMatch|cco:ont00000077|CCO: Code Identifier
+br:NCM|broadMatch|cco:ont00000077|CCO: Code Identifier
+st:STANAG4329|relatedMatch|cco:ont00002014|CCO: Barcode
+br:GS1Brasil|relatedMatch|cco:ont00002014|CCO: Barcode
+br:PFM|relatedMatch|cco:ont00000639|CCO: Mine
+br:PaiolExplosivos|relatedMatch|cco:ont00000220|CCO: Ammunition Depot (armazena munição; paiol de mineração armazena explosivos)
+br:QAV1|broadMatch|cco:ont00001135|CCO: Portion of Liquid Fuel
+st:F34|broadMatch|cco:ont00001135|CCO: Portion of Liquid Fuel
+st:F35|broadMatch|cco:ont00001135|CCO: Portion of Liquid Fuel
+br:ExercitoBrasileiro|broadMatch|cco:ont00000426|CCO: Military Personnel Force
+br:MarinhaDoBrasil|broadMatch|cco:ont00000426|CCO: Military Personnel Force
+br:ForcaAereaBrasileira|broadMatch|cco:ont00000426|CCO: Military Personnel Force
+br:ABIN|broadMatch|cco:ont00000408|CCO: Government Organization
+br:IBGE|broadMatch|cco:ont00000408|CCO: Government Organization
+br:ANAC|broadMatch|cco:ont00000408|CCO: Government Organization
+br:DNIT|broadMatch|cco:ont00000408|CCO: Government Organization
+br:ANTT|broadMatch|cco:ont00000408|CCO: Government Organization
+br:ANM|broadMatch|cco:ont00000408|CCO: Government Organization
+br:CGU|broadMatch|cco:ont00000408|CCO: Government Organization
+br:ESG|broadMatch|cco:ont00000408|CCO: Government Organization
+br:IMBEL|broadMatch|cco:ont00000443|CCO: Commercial Organization (empresa pública)
+br:EMGEPRON|broadMatch|cco:ont00000443|CCO: Commercial Organization (empresa pública)
+br:Embraer|broadMatch|cco:ont00000443|CCO: Commercial Organization
+br:Avibras|broadMatch|cco:ont00000443|CCO: Commercial Organization
+st:FSC10|relatedMatch|ext:UNSPSC46|UNSPSC segmento 46
+st:FSC13|relatedMatch|ext:UNSPSC46|UNSPSC segmento 46

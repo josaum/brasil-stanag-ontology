@@ -1,0 +1,326 @@
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:    <http://purl.org/dc/terms/> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix dcat:   <http://www.w3.org/ns/dcat#> .
+@prefix org:    <http://www.w3.org/ns/org#> .
+@prefix schema: <https://schema.org/> .
+@prefix bst:    <https://github.com/josaum/brasil-stanag-ontology/ns#> .
+@prefix br:     <https://github.com/josaum/brasil-stanag-ontology/br#> .
+@prefix st:     <https://github.com/josaum/brasil-stanag-ontology/stanag#> .
+@prefix ext:    <https://github.com/josaum/brasil-stanag-ontology/ext#> .
+@prefix ds:     <https://github.com/josaum/brasil-stanag-ontology/dataset#> .
+@prefix wd:     <http://www.wikidata.org/entity/> .
+@prefix cco:    <https://www.commoncoreontologies.org/> .
+@prefix epsg:   <http://www.opengis.net/def/crs/EPSG/0/> .
+
+
+st:OTAN a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "North Atlantic Treaty Organization (NATO)"@en ;
+    bst:area "organizacao" ;
+    skos:exactMatch wd:Q7184 .
+
+st:NSO a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "NATO Standardization Office"@en ;
+    bst:area "organizacao" ;
+    skos:exactMatch wd:Q61043196 ;
+    skos:note "Responsável pelo catálogo público de STANAGs."@pt-BR .
+
+st:NCS a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "NATO Codification System"@en ;
+    bst:area "codificacao" ;
+    skos:exactMatch wd:Q6952579 .
+
+st:NSN a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "NATO Stock Number"@en ;
+    bst:area "codificacao" ;
+    skos:exactMatch wd:Q357602 .
+
+st:NCAGE a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "NATO Commercial and Government Entity code (NCAGE)"@en ;
+    bst:area "codificacao" ;
+    skos:exactMatch wd:Q1115390 .
+
+st:STANAG3150 a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "Codification — Uniform System of Supply Classification"@en ;
+    bst:area "codificacao" ;
+    bst:numero "3150" ;
+    bst:publicacaoAliada "ACodP-1" .
+
+st:STANAG3151 a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "Codification — Uniform System of Item Identification"@en ;
+    bst:area "codificacao" ;
+    bst:numero "3151" ;
+    bst:publicacaoAliada "ACodP-1" .
+
+st:STANAG4177 a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "Codification — Uniform System of Data Acquisition"@en ;
+    bst:area "codificacao" ;
+    bst:numero "4177" ;
+    bst:publicacaoAliada "ACodP-1" .
+
+st:FSC10 a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "Supply group 10 — Weapons"@en ;
+    bst:area "codificacao" ;
+    skos:note "Títulos de grupos/classes de suprimento conforme a Federal Supply Classification, usada pelo NCS."@pt-BR .
+
+st:FSC13 a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "Supply group 13 — Ammunition and Explosives"@en ;
+    bst:area "codificacao" .
+
+st:FSC15 a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "Supply group 15 — Aircraft and Airframe Structural Components"@en ;
+    bst:area "codificacao" .
+
+st:FSC19 a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "Supply group 19 — Ships, Small Craft, Pontoons, and Floating Docks"@en ;
+    bst:area "codificacao" .
+
+st:FSC22 a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "Supply group 22 — Railway Equipment"@en ;
+    bst:area "codificacao" .
+
+st:FSC23 a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "Supply group 23 — Ground Effect Vehicles, Motor Vehicles, Trailers, and Cycles"@en ;
+    bst:area "codificacao" .
+
+st:FSC2350 a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "Supply class 2350 — Combat, Assault, and Tactical Vehicles, Tracked"@en ;
+    bst:area "codificacao" .
+
+st:FSC2355 a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "Supply class 2355 — Combat, Assault, and Tactical Vehicles, Wheeled"@en ;
+    bst:area "codificacao" .
+
+st:FSC58 a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "Supply group 58 — Communication, Detection, and Coherent Radiation Equipment"@en ;
+    bst:area "codificacao" .
+
+st:FSC91 a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "Supply group 91 — Fuels, Lubricants, Oils, and Waxes"@en ;
+    bst:area "codificacao" .
+
+st:STANAG4329 a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "NATO Standard Bar Code Symbologies"@en ;
+    bst:area "logistica" ;
+    bst:numero "4329" ;
+    skos:note "Título a confirmar no catálogo NSO."@pt-BR .
+
+st:MLC a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "Military Load Classification (MLC)"@en ;
+    bst:area "mobilidade" ;
+    skos:exactMatch wd:Q956949 .
+
+st:STANAG2021 a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "Military Load Classification of Bridges, Ferries, Rafts and Vehicles"@en ;
+    bst:area "mobilidade" ;
+    bst:numero "2021" .
+
+st:STANAG2468 a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "Technical Aspects of the Transport of Military Materials by Railroad"@en ;
+    bst:area "mobilidade" ;
+    bst:numero "2468" ;
+    bst:publicacaoAliada "AMovP-4" .
+
+st:STANAG2174 a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "Military Routes and Route/Road Networks"@en ;
+    bst:area "mobilidade" ;
+    bst:numero "2174" ;
+    bst:publicacaoAliada "AMovP-1" .
+
+st:STANAG2211 a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "Geodetic Datums, Projections, Grids and Grid References"@en ;
+    bst:area "geoespacial" ;
+    bst:numero "2211" ;
+    bst:publicacaoAliada "AGeoP-21" .
+
+st:WGS84 a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "World Geodetic System 1984 (WGS 84)"@en ;
+    bst:area "geoespacial" ;
+    skos:relatedMatch wd:Q215848 ;
+    skos:note "Item do Wikidata cobre a família World Geodetic System."@pt-BR .
+
+st:MGRS a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "Military Grid Reference System (MGRS)"@en ;
+    bst:area "geoespacial" ;
+    skos:exactMatch wd:Q1922471 ;
+    skos:note "Baseado nas projeções UTM/UPS."@pt-BR .
+
+st:STANAG7074 a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "Digital Geographic Information Exchange Standard (DIGEST)"@en ;
+    bst:area "geoespacial" ;
+    bst:numero "7074" ;
+    bst:publicacaoAliada "AGeoP-3" ;
+    skos:relatedMatch wd:Q26710972 ;
+    skos:note "Item do Wikidata descreve a 1ª edição."@pt-BR .
+
+st:STANAG1059 a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "Letter Codes for Geographical Entities"@en ;
+    bst:area "geoespacial" ;
+    bst:numero "1059" ;
+    skos:relatedMatch wd:Q1394114 ;
+    skos:note "Item do Wikidata é a lista de códigos de país da OTAN."@pt-BR .
+
+st:STANAG4774 a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "Confidentiality Metadata Label Syntax"@en ;
+    bst:area "confidencialidade" ;
+    bst:numero "4774" ;
+    bst:publicacaoAliada "ADatP-4774" .
+
+st:STANAG4778 a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "Metadata Binding Mechanism"@en ;
+    bst:area "confidencialidade" ;
+    bst:numero "4778" ;
+    bst:publicacaoAliada "ADatP-4778" .
+
+st:NCMS a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "NATO Core Metadata Specification (NCMS)"@en ;
+    bst:area "confidencialidade" ;
+    bst:publicacaoAliada "ADatP-5636" ;
+    skos:note "Publicação a confirmar."@pt-BR .
+
+st:STANAG4569 a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "Protection Levels for Occupants of Armoured Vehicles"@en ;
+    bst:area "protecao-blindados" ;
+    bst:numero "4569" ;
+    bst:publicacaoAliada "AEP-55" ;
+    skos:exactMatch wd:Q1639446 .
+
+st:STANAG2920 a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "Classification of Personal Armour"@en ;
+    bst:area "protecao-blindados" ;
+    bst:numero "2920" ;
+    skos:exactMatch wd:Q25447921 .
+
+st:STANAG4172 a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "Munição 5,56 mm (padrão OTAN)"@pt-BR ;
+    bst:area "municao-armamento" ;
+    bst:numero "4172" ;
+    skos:relatedMatch wd:Q238456 ;
+    skos:note "Título descritivo, não oficial. Wikidata: cartucho 5.56×45mm NATO."@pt-BR .
+
+st:STANAG2310 a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "Munição 7,62 mm (padrão OTAN)"@pt-BR ;
+    bst:area "municao-armamento" ;
+    bst:numero "2310" ;
+    skos:relatedMatch wd:Q259210 ;
+    skos:note "Título descritivo, não oficial. Wikidata: cartucho 7.62×51mm NATO."@pt-BR .
+
+st:STANAG4090 a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "Munição 9 mm (padrão OTAN)"@pt-BR ;
+    bst:area "municao-armamento" ;
+    bst:numero "4090" ;
+    skos:relatedMatch wd:Q135550 ;
+    skos:note "Título descritivo, não oficial. Wikidata: cartucho 9×19mm Parabellum."@pt-BR .
+
+st:STANAG4383 a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "Munição 12,7 mm (padrão OTAN)"@pt-BR ;
+    bst:area "municao-armamento" ;
+    bst:numero "4383" ;
+    skos:relatedMatch wd:Q171628 ;
+    skos:note "Título descritivo, não oficial. Wikidata: cartucho .50 BMG."@pt-BR .
+
+st:STANAG4694 a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "NATO Accessory Rail"@en ;
+    bst:area "municao-armamento" ;
+    bst:numero "4694" ;
+    skos:relatedMatch wd:Q1541833 ;
+    skos:note "Wikidata: trilho Picatinny (MIL-STD-1913), antecessor relacionado."@pt-BR .
+
+st:STANAG4179 a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "STANAG magazine (proposta não ratificada)"@en ;
+    bst:area "municao-armamento" ;
+    skos:exactMatch wd:Q2756163 .
+
+st:STANAG5516 a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "Enlace de dados tático Link 16"@pt-BR ;
+    bst:area "enlace-dados" ;
+    bst:numero "5516" ;
+    skos:relatedMatch wd:Q544907 ;
+    skos:note "Título descritivo, não oficial."@pt-BR .
+
+st:STANAG5511 a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "Enlace de dados tático Link 11"@pt-BR ;
+    bst:area "enlace-dados" ;
+    bst:numero "5511" ;
+    skos:relatedMatch wd:Q336623 ;
+    skos:note "Título descritivo, não oficial."@pt-BR .
+
+st:STANAG5522 a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "Enlace de dados tático Link 22"@pt-BR ;
+    bst:area "enlace-dados" ;
+    bst:numero "5522" ;
+    skos:relatedMatch wd:Q1475038 ;
+    skos:note "Título descritivo, não oficial."@pt-BR .
+
+st:STANAG4586 a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "Standard Interfaces of UAV Control System (UCS) for NATO UAV Interoperability"@en ;
+    bst:area "aeronaves-nao-tripuladas" ;
+    bst:numero "4586" ;
+    skos:exactMatch wd:Q7394640 .
+
+st:STANAG4671 a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "UAV System Airworthiness Requirements (USAR)"@en ;
+    bst:area "aeronaves-nao-tripuladas" ;
+    bst:numero "4671" ;
+    skos:exactMatch wd:Q24589689 .
+
+st:STANAG1135 a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "Interchangeability of Fuels, Lubricants and Associated Products"@en ;
+    bst:area "combustiveis" ;
+    bst:numero "1135" .
+
+st:F34 a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "Código OTAN de combustível F-34 (JP-8)"@pt-BR ;
+    bst:area "combustiveis" ;
+    skos:relatedMatch wd:Q905468 .
+
+st:F35 a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "Código OTAN de combustível F-35 (Jet A-1)"@pt-BR ;
+    bst:area "combustiveis" .
+
+st:STANAG2019 a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "NATO Joint Military Symbology"@en ;
+    bst:area "terminologia-simbologia" ;
+    bst:numero "2019" ;
+    bst:publicacaoAliada "APP-6" ;
+    skos:exactMatch wd:Q694745 .
+
+st:AAP6 a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "NATO Glossary of Terms and Definitions"@en ;
+    bst:area "terminologia-simbologia" ;
+    bst:publicacaoAliada "AAP-6" .
+
+st:STANAG2116 a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "NATO Codes for Grades of Military Personnel"@en ;
+    bst:area "terminologia-simbologia" ;
+    bst:numero "2116" ;
+    skos:relatedMatch wd:Q654899 .
+
+st:AlfabetoFonetico a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "NATO/ICAO spelling alphabet"@en ;
+    bst:area "terminologia-simbologia" ;
+    skos:exactMatch wd:Q190194 .
+
+st:NAFv4 a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "NATO Architecture Framework, version 4"@en ;
+    bst:area "arquitetura" ;
+    skos:exactMatch wd:Q6952577 .
+
+st:ADatP34 a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "NATO Interoperability Standards and Profiles (NISP)"@en ;
+    bst:area "arquitetura" ;
+    bst:publicacaoAliada "ADatP-34" .
+
+st:MIP a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "Multilateral Interoperability Programme (MIP)"@en ;
+    bst:area "arquitetura" ;
+    skos:exactMatch wd:Q4298909 ;
+    skos:note "Programa multinacional, não órgão da OTAN."@pt-BR .
+
+st:MIM a bst:ReferenciaOTAN , skos:Concept ;
+    skos:prefLabel "MIP Information Model (MIM)"@en ;
+    bst:area "arquitetura" ;
+    skos:note "Sucessor do JC3IEDM."@pt-BR .

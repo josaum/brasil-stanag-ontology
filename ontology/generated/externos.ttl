@@ -1,0 +1,130 @@
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:    <http://purl.org/dc/terms/> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix dcat:   <http://www.w3.org/ns/dcat#> .
+@prefix org:    <http://www.w3.org/ns/org#> .
+@prefix schema: <https://schema.org/> .
+@prefix bst:    <https://github.com/josaum/brasil-stanag-ontology/ns#> .
+@prefix br:     <https://github.com/josaum/brasil-stanag-ontology/br#> .
+@prefix st:     <https://github.com/josaum/brasil-stanag-ontology/stanag#> .
+@prefix ext:    <https://github.com/josaum/brasil-stanag-ontology/ext#> .
+@prefix ds:     <https://github.com/josaum/brasil-stanag-ontology/dataset#> .
+@prefix wd:     <http://www.wikidata.org/entity/> .
+@prefix cco:    <https://www.commoncoreontologies.org/> .
+@prefix epsg:   <http://www.opengis.net/def/crs/EPSG/0/> .
+
+
+br:Guarani skos:broadMatch cco:ont00000467 .  # CCO: Armored Personnel Carrier
+
+br:IA2 skos:broadMatch cco:ont00000445 .  # CCO: Weapon
+
+br:AstrosII skos:broadMatch cco:ont00000445 .  # CCO: Weapon
+
+br:C390 skos:broadMatch cco:ont00001043 .  # CCO: Aircraft
+
+st:FSC2350 skos:relatedMatch cco:ont00000427 .  # CCO: Armored Fighting Vehicle (a classe FSC inclui veículos táticos não blindados)
+
+st:FSC2355 skos:relatedMatch cco:ont00000427 .  # CCO: Armored Fighting Vehicle (idem)
+
+st:FSC23 skos:relatedMatch cco:ont00000618 .  # CCO: Ground Vehicle
+
+st:FSC22 skos:relatedMatch cco:ont00000796 .  # CCO: Rail Transport Vehicle
+
+st:FSC15 skos:relatedMatch cco:ont00001043 .  # CCO: Aircraft
+
+st:FSC19 skos:relatedMatch cco:ont00000440 .  # CCO: Watercraft
+
+st:FSC10 skos:relatedMatch cco:ont00000445 .  # CCO: Weapon
+
+st:FSC13 skos:relatedMatch cco:ont00001150 .  # CCO: Portion of Ammunition
+
+st:FSC13 skos:relatedMatch cco:ont00000552 .  # CCO: Explosive Weapon
+
+st:FSC91 skos:relatedMatch cco:ont00001135 .  # CCO: Portion of Liquid Fuel
+
+st:FSC58 skos:relatedMatch cco:ont00000903 .  # CCO: Radio Communication Instrument
+
+st:STANAG4172 skos:relatedMatch cco:ont00001003 .  # CCO: Cartridge
+
+st:STANAG2310 skos:relatedMatch cco:ont00001003 .  # CCO: Cartridge
+
+st:STANAG4090 skos:relatedMatch cco:ont00001003 .  # CCO: Cartridge
+
+st:STANAG4383 skos:relatedMatch cco:ont00001003 .  # CCO: Cartridge
+
+st:MLC skos:relatedMatch cco:ont00001099 .  # CCO: Bridge
+
+st:STANAG2174 skos:relatedMatch cco:ont00000247 .  # CCO: Road
+
+br:SNV skos:relatedMatch cco:ont00000247 .  # CCO: Road
+
+st:STANAG2468 skos:relatedMatch cco:ont00000456 .  # CCO: Railway
+
+br:MalhaFerroviaria skos:relatedMatch cco:ont00000456 .  # CCO: Railway
+
+br:SIRGAS2000 skos:broadMatch cco:ont00000469 .  # CCO: Geospatial Coordinate Reference System
+
+st:WGS84 skos:broadMatch cco:ont00000469 .  # CCO: Geospatial Coordinate Reference System
+
+br:SIRGAS2000 skos:exactMatch epsg:4674 .  # Registro EPSG: SIRGAS 2000 (conferido em opengis.net)
+
+st:WGS84 skos:exactMatch epsg:4326 .  # Registro EPSG: WGS 84
+
+st:NSN skos:broadMatch cco:ont00000077 .  # CCO: Code Identifier
+
+st:NCAGE skos:broadMatch cco:ont00000077 .  # CCO: Code Identifier
+
+br:RENAVAM skos:broadMatch cco:ont00000077 .  # CCO: Code Identifier
+
+br:NCM skos:broadMatch cco:ont00000077 .  # CCO: Code Identifier
+
+st:STANAG4329 skos:relatedMatch cco:ont00002014 .  # CCO: Barcode
+
+br:GS1Brasil skos:relatedMatch cco:ont00002014 .  # CCO: Barcode
+
+br:PFM skos:relatedMatch cco:ont00000639 .  # CCO: Mine
+
+br:PaiolExplosivos skos:relatedMatch cco:ont00000220 .  # CCO: Ammunition Depot (armazena munição; paiol de mineração armazena explosivos)
+
+br:QAV1 skos:broadMatch cco:ont00001135 .  # CCO: Portion of Liquid Fuel
+
+st:F34 skos:broadMatch cco:ont00001135 .  # CCO: Portion of Liquid Fuel
+
+st:F35 skos:broadMatch cco:ont00001135 .  # CCO: Portion of Liquid Fuel
+
+br:ExercitoBrasileiro skos:broadMatch cco:ont00000426 .  # CCO: Military Personnel Force
+
+br:MarinhaDoBrasil skos:broadMatch cco:ont00000426 .  # CCO: Military Personnel Force
+
+br:ForcaAereaBrasileira skos:broadMatch cco:ont00000426 .  # CCO: Military Personnel Force
+
+br:ABIN skos:broadMatch cco:ont00000408 .  # CCO: Government Organization
+
+br:IBGE skos:broadMatch cco:ont00000408 .  # CCO: Government Organization
+
+br:ANAC skos:broadMatch cco:ont00000408 .  # CCO: Government Organization
+
+br:DNIT skos:broadMatch cco:ont00000408 .  # CCO: Government Organization
+
+br:ANTT skos:broadMatch cco:ont00000408 .  # CCO: Government Organization
+
+br:ANM skos:broadMatch cco:ont00000408 .  # CCO: Government Organization
+
+br:CGU skos:broadMatch cco:ont00000408 .  # CCO: Government Organization
+
+br:ESG skos:broadMatch cco:ont00000408 .  # CCO: Government Organization
+
+br:IMBEL skos:broadMatch cco:ont00000443 .  # CCO: Commercial Organization (empresa pública)
+
+br:EMGEPRON skos:broadMatch cco:ont00000443 .  # CCO: Commercial Organization (empresa pública)
+
+br:Embraer skos:broadMatch cco:ont00000443 .  # CCO: Commercial Organization
+
+br:Avibras skos:broadMatch cco:ont00000443 .  # CCO: Commercial Organization
+
+st:FSC10 skos:relatedMatch ext:UNSPSC46 .  # UNSPSC segmento 46
+
+st:FSC13 skos:relatedMatch ext:UNSPSC46 .  # UNSPSC segmento 46

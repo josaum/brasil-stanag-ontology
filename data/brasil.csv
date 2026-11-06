@@ -1,0 +1,63 @@
+curie|rotulo|tipo|wikidata|fonte|nota
+br:Brasil|Brasil|pais|Q155||Não é membro nem parceiro formal da OTAN; designado "major non-NATO ally" pelos EUA em 2019 (Wikidata Q145560).
+br:MinisterioDefesaSISCADE|Sistema de Catalogação de Defesa (SISCADE) — Ministério da Defesa|sistema|||Brasil participa do NCS como país Tier 2 desde 2002, segundo o Ministério da Defesa.
+br:RENAVAM|RENAVAM — código marca/modelo/versão de veículos|sistema|||
+br:CTB|Código de Trânsito Brasileiro (Lei 9.503/1997)|lei|Q10263241|https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm|
+br:CTB_art120_par2|CTB, art. 120, §2º — veículo de uso bélico dispensado de registro|dispositivo||https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm|
+br:SINAMOB|Sistema Nacional de Mobilização (Lei 11.631/2007)|lei||https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/lei/l11631.htm|
+br:NBR7188|ABNT NBR 7188 — carga móvel rodoviária e de pedestres em pontes|norma-tecnica|||
+br:NBR15000|ABNT NBR 15000 — blindagens para impactos balísticos|norma-tecnica|||
+br:Decreto10030|Decreto 10.030/2019 — Regulamento de Produtos Controlados|decreto||https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/decreto/d10030.htm|
+br:MalhaFerroviaria|Inventário da malha ferroviária federal (bitola, carga por eixo, gabarito)|conceito|||
+br:SNV|Sistema Nacional de Viação — rede rodoviária federal|conceito|||
+br:PFM|Plano de Fechamento de Mina (ANM)|conceito|||Em revisão por consulta pública da ANM (2026).
+br:PaiolExplosivos|Paiol de explosivos em mineração (NRM-16)|conceito|||
+br:SIRGAS2000|SIRGAS2000 — referencial geodésico oficial do Brasil|referencial|||IBGE; EPSG:4674.
+br:SCN_UTM|Sistema Cartográfico Nacional — projeção UTM|referencial|||
+br:ETEDGV|ET-EDGV — Especificação Técnica para Estruturação de Dados Geoespaciais Vetoriais (CONCAR)|norma-tecnica|||
+br:LAI|Lei de Acesso à Informação (Lei 12.527/2011)|lei|Q18470527|https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm|
+br:Decreto7845|Decreto 7.845/2012 — tratamento de informação classificada|decreto||https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/decreto/d7845.htm|
+br:LGPD|Lei Geral de Proteção de Dados (Lei 13.709/2018)|lei|Q56355493|https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm|
+br:ICPBrasil|Infraestrutura de Chaves Públicas Brasileira (ICP-Brasil)|infraestrutura|Q10299348||
+br:ePING|e-PING — Padrões de Interoperabilidade de Governo Eletrônico|padrao|||
+br:ePMG|e-PMG — Padrão de Metadados do Governo Eletrônico|padrao|||
+br:GS1Brasil|GS1 Brasil — códigos de barras (GTIN)|organizacao|||Filial nacional da GS1 (Wikidata Q731100).
+br:QAV1|QAV-1 — querosene de aviação (especificação ANP)|especificacao|||Equivalente nacional ao Jet A-1.
+br:RBACE94|RBAC-E nº 94 — aeronaves não tripuladas de uso civil (ANAC)|regulamento|||
+br:MD35G01|MD35-G-01 — Glossário das Forças Armadas (Ministério da Defesa)|doutrina|||
+br:MD33M02|MD33-M-02 — Manual de abreviaturas, siglas, símbolos e convenções cartográficas das Forças Armadas|doutrina|||Número e título a confirmar.
+br:EstatutoMilitares|Estatuto dos Militares (Lei 6.880/1980) — hierarquia militar|lei||https://www.planalto.gov.br/ccivil_03/leis/l6880.htm|
+br:CodigoPaisBRA|Código de país BRA (ISO 3166-1 alfa-3)|codigo|Q1341492||O item do Wikidata é o padrão ISO 3166-1 alfa-3.
+br:NCM|Nomenclatura Comum do Mercosul (NCM)|classificacao|Q10337289||Baseada no Sistema Harmonizado (Wikidata Q2294130).
+br:NCM8710|NCM/SH 87.10 — Veículos e carros blindados de combate, armados ou não, e suas partes|classificacao|||
+br:NCM93|NCM/SH capítulo 93 — Armas e munições; suas partes e acessórios|classificacao|||
+br:NCM3602|NCM/SH 36.02 — Explosivos preparados|classificacao|||
+br:NCM3603|NCM/SH 36.03 — Estopins, cordões detonantes, espoletas, detonadores e afins|classificacao|||
+br:NCM8802|NCM/SH 88.02 — Aeronaves (helicópteros, aviões) e veículos espaciais|classificacao|||
+br:NCM8806|NCM/SH 88.06 — Veículos aéreos não tripulados (SH 2022)|classificacao|||
+br:NCM8906|NCM/SH 89.06 — Outras embarcações, incluindo navios de guerra|classificacao|||
+br:NCM86|NCM/SH capítulo 86 — Veículos e material para vias férreas|classificacao|||
+br:NCM2710|NCM/SH 27.10 — Óleos de petróleo (inclui querosene de aviação e diesel)|classificacao|||
+br:NCM8526|NCM/SH 85.26 — Aparelhos de radiodetecção (radar), radionavegação e radiotelecomando|classificacao|||
+br:LinkBR2|Link-BR2 — enlace de dados tático brasileiro|sistema|Q108265833||
+br:IA2|Fuzil IMBEL IA2|equipamento|Q14807505||Versões em 5,56 mm e 7,62 mm.
+br:Guarani|VBTP-MR Guarani|equipamento|Q7906606||
+br:C390|Embraer C-390 Millennium|equipamento|Q975281||
+br:AstrosII|Astros II — sistema lançador múltiplo de foguetes|equipamento|Q195169||
+br:ExercitoBrasileiro|Exército Brasileiro|forca-armada|Q2292358||
+br:MarinhaDoBrasil|Marinha do Brasil|forca-armada|Q1750688||
+br:ForcaAereaBrasileira|Força Aérea Brasileira|forca-armada|Q634542||
+br:ABIN|Agência Brasileira de Inteligência (ABIN)|orgao-publico|Q399639||
+br:IBGE|Instituto Brasileiro de Geografia e Estatística (IBGE)|orgao-publico|Q268072||
+br:ANAC|Agência Nacional de Aviação Civil (ANAC)|orgao-publico|Q4314917||
+br:DNIT|Departamento Nacional de Infraestrutura de Transportes (DNIT)|orgao-publico|Q10265187||
+br:ANTT|Agência Nacional de Transportes Terrestres (ANTT)|orgao-publico|Q9592640||
+br:ANM|Agência Nacional de Mineração (ANM)|orgao-publico|Q16143294||
+br:CGU|Controladoria-Geral da União (CGU)|orgao-publico|Q3624988||
+br:ESG|Escola Superior de Guerra|orgao-publico|Q9296788||
+br:IMBEL|Indústria de Material Bélico do Brasil (IMBEL)|empresa-publica|Q1660051||
+br:EMGEPRON|Empresa Gerencial de Projetos Navais (EMGEPRON)|empresa-publica|Q5323494||
+br:Embraer|Embraer|empresa|Q105557||
+br:Avibras|Avibras|empresa|Q4828757||
+br:END|Estratégia Nacional de Defesa|politica|Q10276570||
+br:BID|Base Industrial de Defesa|conceito|Q124466543||

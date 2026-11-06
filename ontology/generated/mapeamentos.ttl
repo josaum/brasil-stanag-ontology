@@ -1,0 +1,720 @@
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:    <http://purl.org/dc/terms/> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix dcat:   <http://www.w3.org/ns/dcat#> .
+@prefix org:    <http://www.w3.org/ns/org#> .
+@prefix schema: <https://schema.org/> .
+@prefix bst:    <https://github.com/josaum/brasil-stanag-ontology/ns#> .
+@prefix br:     <https://github.com/josaum/brasil-stanag-ontology/br#> .
+@prefix st:     <https://github.com/josaum/brasil-stanag-ontology/stanag#> .
+@prefix ext:    <https://github.com/josaum/brasil-stanag-ontology/ext#> .
+@prefix ds:     <https://github.com/josaum/brasil-stanag-ontology/dataset#> .
+@prefix wd:     <http://www.wikidata.org/entity/> .
+@prefix cco:    <https://www.commoncoreontologies.org/> .
+@prefix epsg:   <http://www.opengis.net/def/crs/EPSG/0/> .
+
+
+bst:m01 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:MinisterioDefesaSISCADE ;
+    bst:conceitoOTAN st:STANAG3150 ;
+    bst:relacao skos:closeMatch ;
+    bst:status "verificado" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source "Catálogo público NSO" ;
+    dct:source "Ministério da Defesa (catalogação)" ;
+    rdfs:comment "O SISCADE implementa no Brasil a classificação de suprimentos do NCS."@pt-BR .
+
+br:MinisterioDefesaSISCADE skos:closeMatch st:STANAG3150 .
+
+bst:m02 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:MinisterioDefesaSISCADE ;
+    bst:conceitoOTAN st:STANAG3151 ;
+    bst:relacao skos:closeMatch ;
+    bst:status "verificado" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source "Catálogo público NSO" ;
+    dct:source "Ministério da Defesa (catalogação)" .
+
+br:MinisterioDefesaSISCADE skos:closeMatch st:STANAG3151 .
+
+bst:m03 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:MinisterioDefesaSISCADE ;
+    bst:conceitoOTAN st:STANAG4177 ;
+    bst:relacao skos:closeMatch ;
+    bst:status "verificado" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source "Catálogo público NSO" ;
+    dct:source "Ministério da Defesa (catalogação)" .
+
+br:MinisterioDefesaSISCADE skos:closeMatch st:STANAG4177 .
+
+bst:m04 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:MinisterioDefesaSISCADE ;
+    bst:conceitoOTAN st:NCS ;
+    bst:relacao skos:closeMatch ;
+    bst:status "verificado" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source "Ministério da Defesa (catalogação)" ;
+    rdfs:comment "Brasil participa do NCS como Tier 2."@pt-BR .
+
+br:MinisterioDefesaSISCADE skos:closeMatch st:NCS .
+
+bst:m05 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:RENAVAM ;
+    bst:conceitoOTAN st:NSN ;
+    bst:relacao skos:relatedMatch ;
+    bst:status "verificado" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source "Contribuição BN03-C01 ao Brasil Participativo (proposta 181303)" ;
+    rdfs:comment "Proposta: correspondência opcional código RENAVAM ↔ NSN para veículos não bélicos usados por órgãos de defesa."@pt-BR .
+
+br:RENAVAM skos:relatedMatch st:NSN .
+
+bst:m06 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:RENAVAM ;
+    bst:conceitoOTAN st:STANAG3151 ;
+    bst:relacao skos:relatedMatch ;
+    bst:status "verificado" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source "Contribuição BN03-C01 ao Brasil Participativo (proposta 181303)" .
+
+br:RENAVAM skos:relatedMatch st:STANAG3151 .
+
+bst:m07 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:CTB_art120_par2 ;
+    bst:conceitoOTAN st:STANAG3151 ;
+    bst:relacao skos:relatedMatch ;
+    bst:status "verificado" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source <https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm> ;
+    rdfs:comment "Limite de escopo: veículos de uso bélico ficam fora do SNT; sua catalogação é feita pelas Forças."@pt-BR .
+
+br:CTB_art120_par2 skos:relatedMatch st:STANAG3151 .
+
+bst:m08 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:NCM8710 ;
+    bst:conceitoOTAN st:FSC2350 ;
+    bst:relacao skos:relatedMatch ;
+    bst:status "verificado" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source "Sistema Harmonizado (OMA)" ;
+    dct:source "Federal Supply Classification" ;
+    rdfs:comment "Classificação aduaneira vs. de suprimento: finalidades diferentes."@pt-BR .
+
+br:NCM8710 skos:relatedMatch st:FSC2350 .
+
+bst:m09 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:NCM8710 ;
+    bst:conceitoOTAN st:FSC2355 ;
+    bst:relacao skos:relatedMatch ;
+    bst:status "verificado" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source "Sistema Harmonizado (OMA)" ;
+    dct:source "Federal Supply Classification" .
+
+br:NCM8710 skos:relatedMatch st:FSC2355 .
+
+bst:m10 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:NCM93 ;
+    bst:conceitoOTAN st:FSC10 ;
+    bst:relacao skos:relatedMatch ;
+    bst:status "verificado" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source "Sistema Harmonizado (OMA)" ;
+    dct:source "Federal Supply Classification" .
+
+br:NCM93 skos:relatedMatch st:FSC10 .
+
+bst:m11 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:NCM93 ;
+    bst:conceitoOTAN st:FSC13 ;
+    bst:relacao skos:relatedMatch ;
+    bst:status "verificado" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source "Sistema Harmonizado (OMA)" ;
+    dct:source "Federal Supply Classification" .
+
+br:NCM93 skos:relatedMatch st:FSC13 .
+
+bst:m12 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:NCM3602 ;
+    bst:conceitoOTAN st:FSC13 ;
+    bst:relacao skos:relatedMatch ;
+    bst:status "verificado" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source "Sistema Harmonizado (OMA)" ;
+    dct:source "Federal Supply Classification" .
+
+br:NCM3602 skos:relatedMatch st:FSC13 .
+
+bst:m13 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:NCM3603 ;
+    bst:conceitoOTAN st:FSC13 ;
+    bst:relacao skos:relatedMatch ;
+    bst:status "verificado" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source "Sistema Harmonizado (OMA)" ;
+    dct:source "Federal Supply Classification" .
+
+br:NCM3603 skos:relatedMatch st:FSC13 .
+
+bst:m14 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:NCM8802 ;
+    bst:conceitoOTAN st:FSC15 ;
+    bst:relacao skos:relatedMatch ;
+    bst:status "verificado" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source "Sistema Harmonizado (OMA)" ;
+    dct:source "Federal Supply Classification" .
+
+br:NCM8802 skos:relatedMatch st:FSC15 .
+
+bst:m15 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:NCM8906 ;
+    bst:conceitoOTAN st:FSC19 ;
+    bst:relacao skos:relatedMatch ;
+    bst:status "verificado" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source "Sistema Harmonizado (OMA)" ;
+    dct:source "Federal Supply Classification" .
+
+br:NCM8906 skos:relatedMatch st:FSC19 .
+
+bst:m16 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:NCM86 ;
+    bst:conceitoOTAN st:FSC22 ;
+    bst:relacao skos:relatedMatch ;
+    bst:status "verificado" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source "Sistema Harmonizado (OMA)" ;
+    dct:source "Federal Supply Classification" .
+
+br:NCM86 skos:relatedMatch st:FSC22 .
+
+bst:m17 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:NCM2710 ;
+    bst:conceitoOTAN st:FSC91 ;
+    bst:relacao skos:relatedMatch ;
+    bst:status "verificado" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source "Sistema Harmonizado (OMA)" ;
+    dct:source "Federal Supply Classification" .
+
+br:NCM2710 skos:relatedMatch st:FSC91 .
+
+bst:m18 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:NCM8526 ;
+    bst:conceitoOTAN st:FSC58 ;
+    bst:relacao skos:relatedMatch ;
+    bst:status "verificado" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source "Sistema Harmonizado (OMA)" ;
+    dct:source "Federal Supply Classification" .
+
+br:NCM8526 skos:relatedMatch st:FSC58 .
+
+bst:m19 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:MalhaFerroviaria ;
+    bst:conceitoOTAN st:FSC22 ;
+    bst:relacao skos:relatedMatch ;
+    bst:status "verificado" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source "Federal Supply Classification" .
+
+br:MalhaFerroviaria skos:relatedMatch st:FSC22 .
+
+bst:m20 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:Decreto10030 ;
+    bst:conceitoOTAN st:FSC13 ;
+    bst:relacao skos:relatedMatch ;
+    bst:status "verificado" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source <https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/decreto/d10030.htm> ;
+    rdfs:comment "Munições e explosivos são produtos controlados pelo Exército."@pt-BR .
+
+br:Decreto10030 skos:relatedMatch st:FSC13 .
+
+bst:m21 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:GS1Brasil ;
+    bst:conceitoOTAN st:STANAG4329 ;
+    bst:relacao skos:relatedMatch ;
+    bst:status "a-confirmar" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source "GS1" ;
+    dct:source "catálogo público NSO" ;
+    rdfs:comment "Título do STANAG 4329 a confirmar."@pt-BR .
+
+br:GS1Brasil skos:relatedMatch st:STANAG4329 .
+
+bst:m22 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:NBR7188 ;
+    bst:conceitoOTAN st:STANAG2021 ;
+    bst:relacao skos:relatedMatch ;
+    bst:status "verificado" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source "Catálogo público NSO" ;
+    dct:source "ABNT" ;
+    rdfs:comment "Ambos tratam de carga em pontes, com métodos diferentes; não há conversão oficial."@pt-BR .
+
+br:NBR7188 skos:relatedMatch st:STANAG2021 .
+
+bst:m23 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:NBR7188 ;
+    bst:conceitoOTAN st:MLC ;
+    bst:relacao skos:relatedMatch ;
+    bst:status "verificado" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source "ABNT" ;
+    dct:source "Wikidata Q956949" .
+
+br:NBR7188 skos:relatedMatch st:MLC .
+
+bst:m24 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:SNV ;
+    bst:conceitoOTAN st:MLC ;
+    bst:relacao skos:relatedMatch ;
+    bst:status "verificado" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source "Contribuição BN02-C01 ao Brasil Participativo (proposta 182794)" ;
+    rdfs:comment "Proposta: registrar MLC por obra de arte especial."@pt-BR .
+
+br:SNV skos:relatedMatch st:MLC .
+
+bst:m25 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:MalhaFerroviaria ;
+    bst:conceitoOTAN st:STANAG2468 ;
+    bst:relacao skos:relatedMatch ;
+    bst:status "verificado" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source "Catálogo público NSO" ;
+    dct:source "Plano Setorial de Transporte Ferroviário (MPOR, 2026)" .
+
+br:MalhaFerroviaria skos:relatedMatch st:STANAG2468 .
+
+bst:m26 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:SNV ;
+    bst:conceitoOTAN st:STANAG2174 ;
+    bst:relacao skos:relatedMatch ;
+    bst:status "verificado" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source "Catálogo público NSO" ;
+    dct:source "Plano Setorial de Transporte Rodoviário (MPOR, 2026)" .
+
+br:SNV skos:relatedMatch st:STANAG2174 .
+
+bst:m27 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:SINAMOB ;
+    bst:conceitoOTAN st:STANAG2174 ;
+    bst:relacao skos:relatedMatch ;
+    bst:status "verificado" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source <https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/lei/l11631.htm> .
+
+br:SINAMOB skos:relatedMatch st:STANAG2174 .
+
+bst:m28 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:SINAMOB ;
+    bst:conceitoOTAN st:STANAG2468 ;
+    bst:relacao skos:relatedMatch ;
+    bst:status "verificado" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source <https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/lei/l11631.htm> .
+
+br:SINAMOB skos:relatedMatch st:STANAG2468 .
+
+bst:m29 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:SIRGAS2000 ;
+    bst:conceitoOTAN st:STANAG2211 ;
+    bst:relacao skos:relatedMatch ;
+    bst:status "verificado" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source "Catálogo público NSO" ;
+    dct:source "IBGE" ;
+    rdfs:comment "STANAG 2211 adota o WGS 84."@pt-BR .
+
+br:SIRGAS2000 skos:relatedMatch st:STANAG2211 .
+
+bst:m30 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:SIRGAS2000 ;
+    bst:conceitoOTAN st:WGS84 ;
+    bst:relacao skos:relatedMatch ;
+    bst:status "verificado" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source "IBGE" ;
+    dct:source "registro EPSG (4674 e 4326)" ;
+    rdfs:comment "Compatíveis no nível métrico; alta precisão exige transformação documentada."@pt-BR .
+
+br:SIRGAS2000 skos:relatedMatch st:WGS84 .
+
+bst:m31 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:SCN_UTM ;
+    bst:conceitoOTAN st:MGRS ;
+    bst:relacao skos:relatedMatch ;
+    bst:status "verificado" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source "IBGE" ;
+    dct:source "Wikidata Q1922471" ;
+    rdfs:comment "O MGRS é construído sobre as projeções UTM/UPS."@pt-BR .
+
+br:SCN_UTM skos:relatedMatch st:MGRS .
+
+bst:m32 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:ETEDGV ;
+    bst:conceitoOTAN st:STANAG7074 ;
+    bst:relacao skos:relatedMatch ;
+    bst:status "a-confirmar" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source "CONCAR" ;
+    dct:source "Wikidata Q26710972" ;
+    rdfs:comment "Correspondência temática (estruturação de dados geoespaciais)."@pt-BR .
+
+br:ETEDGV skos:relatedMatch st:STANAG7074 .
+
+bst:m33 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:CodigoPaisBRA ;
+    bst:conceitoOTAN st:STANAG1059 ;
+    bst:relacao skos:relatedMatch ;
+    bst:status "a-confirmar" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source "Wikidata Q1394114" ;
+    rdfs:comment "Códigos de país da OTAN e ISO 3166-1 alfa-3."@pt-BR .
+
+br:CodigoPaisBRA skos:relatedMatch st:STANAG1059 .
+
+bst:m34 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:LAI ;
+    bst:conceitoOTAN st:STANAG4774 ;
+    bst:relacao skos:relatedMatch ;
+    bst:status "verificado" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source <https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm> ;
+    rdfs:comment "Relaciona apenas o mecanismo de rotulagem; não há equivalência oficial de graus de sigilo."@pt-BR .
+
+br:LAI skos:relatedMatch st:STANAG4774 .
+
+bst:m35 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:Decreto7845 ;
+    bst:conceitoOTAN st:STANAG4774 ;
+    bst:relacao skos:relatedMatch ;
+    bst:status "verificado" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source <https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/decreto/d7845.htm> ;
+    rdfs:comment "Idem."@pt-BR .
+
+br:Decreto7845 skos:relatedMatch st:STANAG4774 .
+
+bst:m36 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:LGPD ;
+    bst:conceitoOTAN st:STANAG4774 ;
+    bst:relacao skos:relatedMatch ;
+    bst:status "a-confirmar" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source <https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm> ;
+    rdfs:comment "Hipótese: rótulos para dados pessoais."@pt-BR .
+
+br:LGPD skos:relatedMatch st:STANAG4774 .
+
+bst:m37 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:ICPBrasil ;
+    bst:conceitoOTAN st:STANAG4778 ;
+    bst:relacao skos:relatedMatch ;
+    bst:status "verificado" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source "Catálogo público NSO" ;
+    dct:source "ITI (ICP-Brasil)" ;
+    rdfs:comment "Assinatura ICP-Brasil como possível mecanismo de vínculo de rótulos."@pt-BR .
+
+br:ICPBrasil skos:relatedMatch st:STANAG4778 .
+
+bst:m38 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:ePMG ;
+    bst:conceitoOTAN st:NCMS ;
+    bst:relacao skos:relatedMatch ;
+    bst:status "a-confirmar" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source "Governo Digital (e-PMG)" ;
+    dct:source "NSO" ;
+    rdfs:comment "Correspondência temática (metadados)."@pt-BR .
+
+br:ePMG skos:relatedMatch st:NCMS .
+
+bst:m39 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:NBR15000 ;
+    bst:conceitoOTAN st:STANAG4569 ;
+    bst:relacao skos:relatedMatch ;
+    bst:status "verificado" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source "Catálogo público NSO" ;
+    dct:source "ABNT" ;
+    rdfs:comment "Escopos diferentes (blindagem em geral vs. ocupantes de viaturas militares); níveis não equivalentes."@pt-BR .
+
+br:NBR15000 skos:relatedMatch st:STANAG4569 .
+
+bst:m40 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:Decreto10030 ;
+    bst:conceitoOTAN st:STANAG4569 ;
+    bst:relacao skos:relatedMatch ;
+    bst:status "verificado" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source <https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/decreto/d10030.htm> ;
+    rdfs:comment "Blindagem é produto controlado pelo Exército."@pt-BR .
+
+br:Decreto10030 skos:relatedMatch st:STANAG4569 .
+
+bst:m41 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:NBR15000 ;
+    bst:conceitoOTAN st:STANAG2920 ;
+    bst:relacao skos:relatedMatch ;
+    bst:status "verificado" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source "ABNT" ;
+    dct:source "Wikidata Q25447921" ;
+    rdfs:comment "Proteção balística pessoal; níveis não equivalentes."@pt-BR .
+
+br:NBR15000 skos:relatedMatch st:STANAG2920 .
+
+bst:m42 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:Decreto10030 ;
+    bst:conceitoOTAN st:STANAG2920 ;
+    bst:relacao skos:relatedMatch ;
+    bst:status "verificado" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source <https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/decreto/d10030.htm> ;
+    rdfs:comment "Coletes balísticos são produtos controlados."@pt-BR .
+
+br:Decreto10030 skos:relatedMatch st:STANAG2920 .
+
+bst:m43 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:IA2 ;
+    bst:conceitoOTAN st:STANAG4172 ;
+    bst:relacao skos:relatedMatch ;
+    bst:status "verificado" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source "Wikidata Q14807505" ;
+    dct:source "Q238456" ;
+    rdfs:comment "Versão do IA2 em 5,56 mm."@pt-BR .
+
+br:IA2 skos:relatedMatch st:STANAG4172 .
+
+bst:m44 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:IA2 ;
+    bst:conceitoOTAN st:STANAG2310 ;
+    bst:relacao skos:relatedMatch ;
+    bst:status "verificado" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source "Wikidata Q14807505" ;
+    dct:source "Q259210" ;
+    rdfs:comment "Versão do IA2 em 7,62 mm."@pt-BR .
+
+br:IA2 skos:relatedMatch st:STANAG2310 .
+
+bst:m45 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:LinkBR2 ;
+    bst:conceitoOTAN st:STANAG5516 ;
+    bst:relacao skos:relatedMatch ;
+    bst:status "verificado" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source "Wikidata Q108265833" ;
+    dct:source "Q544907" ;
+    rdfs:comment "Ambos são enlaces de dados táticos; não se afirma compatibilidade."@pt-BR .
+
+br:LinkBR2 skos:relatedMatch st:STANAG5516 .
+
+bst:m46 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:RBACE94 ;
+    bst:conceitoOTAN st:STANAG4671 ;
+    bst:relacao skos:relatedMatch ;
+    bst:status "verificado" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source "ANAC" ;
+    dct:source "Wikidata Q24589689" ;
+    rdfs:comment "Regulação civil vs. aeronavegabilidade militar."@pt-BR .
+
+br:RBACE94 skos:relatedMatch st:STANAG4671 .
+
+bst:m47 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:RBACE94 ;
+    bst:conceitoOTAN st:STANAG4586 ;
+    bst:relacao skos:relatedMatch ;
+    bst:status "a-confirmar" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source "ANAC" ;
+    dct:source "Wikidata Q7394640" ;
+    rdfs:comment "Correspondência temática."@pt-BR .
+
+br:RBACE94 skos:relatedMatch st:STANAG4586 .
+
+bst:m48 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:NCM8806 ;
+    bst:conceitoOTAN st:STANAG4671 ;
+    bst:relacao skos:relatedMatch ;
+    bst:status "a-confirmar" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source "Sistema Harmonizado 2022" ;
+    dct:source "Wikidata Q24589689" ;
+    rdfs:comment "Classificação aduaneira de UAV vs. requisito de aeronavegabilidade."@pt-BR .
+
+br:NCM8806 skos:relatedMatch st:STANAG4671 .
+
+bst:m49 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:QAV1 ;
+    bst:conceitoOTAN st:F35 ;
+    bst:relacao skos:closeMatch ;
+    bst:status "verificado" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source "ANP (especificação QAV-1)" ;
+    rdfs:comment "QAV-1 é o equivalente nacional ao Jet A-1."@pt-BR .
+
+br:QAV1 skos:closeMatch st:F35 .
+
+bst:m50 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:QAV1 ;
+    bst:conceitoOTAN st:F34 ;
+    bst:relacao skos:relatedMatch ;
+    bst:status "verificado" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source "ANP" ;
+    dct:source "Wikidata Q905468" ;
+    rdfs:comment "F-34 é Jet A-1 com aditivos militares."@pt-BR .
+
+br:QAV1 skos:relatedMatch st:F34 .
+
+bst:m51 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:QAV1 ;
+    bst:conceitoOTAN st:STANAG1135 ;
+    bst:relacao skos:relatedMatch ;
+    bst:status "a-confirmar" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source "ANP" ;
+    dct:source "catálogo público NSO" .
+
+br:QAV1 skos:relatedMatch st:STANAG1135 .
+
+bst:m52 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:MD35G01 ;
+    bst:conceitoOTAN st:AAP6 ;
+    bst:relacao skos:closeMatch ;
+    bst:status "verificado" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source "Ministério da Defesa (MD35-G-01)" ;
+    dct:source "NSO (AAP-6)" ;
+    rdfs:comment "Correspondência entre documentos (glossários militares oficiais), não entre termos."@pt-BR .
+
+br:MD35G01 skos:closeMatch st:AAP6 .
+
+bst:m53 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:MD33M02 ;
+    bst:conceitoOTAN st:STANAG2019 ;
+    bst:relacao skos:relatedMatch ;
+    bst:status "a-confirmar" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source "Ministério da Defesa" ;
+    dct:source "Wikidata Q694745" ;
+    rdfs:comment "Número e título do manual brasileiro a confirmar."@pt-BR .
+
+br:MD33M02 skos:relatedMatch st:STANAG2019 .
+
+bst:m54 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:EstatutoMilitares ;
+    bst:conceitoOTAN st:STANAG2116 ;
+    bst:relacao skos:relatedMatch ;
+    bst:status "verificado" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source <https://www.planalto.gov.br/ccivil_03/leis/l6880.htm> ;
+    rdfs:comment "Não se declara equivalência posto a posto."@pt-BR .
+
+br:EstatutoMilitares skos:relatedMatch st:STANAG2116 .
+
+bst:m55 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:ePING ;
+    bst:conceitoOTAN st:ADatP34 ;
+    bst:relacao skos:relatedMatch ;
+    bst:status "a-confirmar" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source "Governo Digital (e-PING)" ;
+    dct:source "NSO (ADatP-34)" ;
+    rdfs:comment "Ambos são catálogos de padrões de interoperabilidade."@pt-BR .
+
+br:ePING skos:relatedMatch st:ADatP34 .
+
+bst:m56 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:SINAMOB ;
+    bst:conceitoOTAN st:NAFv4 ;
+    bst:relacao skos:relatedMatch ;
+    bst:status "a-confirmar" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source "NATO (NAF v4)" ;
+    rdfs:comment "Hipótese de trabalho: NAF v4 para descrever a arquitetura de mobilização."@pt-BR .
+
+br:SINAMOB skos:relatedMatch st:NAFv4 .
+
+bst:m57 a bst:Mapeamento ;
+    bst:conceitoBrasileiro br:PaiolExplosivos ;
+    bst:conceitoOTAN st:FSC13 ;
+    bst:relacao skos:relatedMatch ;
+    bst:status "verificado" ;
+    prov:wasAttributedTo bst:autor ;
+    prov:generatedAtTime "2026-11-06"^^xsd:date ;
+    dct:source "Federal Supply Classification" ;
+    dct:source "NRM-16" .
+
+br:PaiolExplosivos skos:relatedMatch st:FSC13 .

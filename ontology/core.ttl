@@ -1,0 +1,71 @@
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:    <http://purl.org/dc/terms/> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix foaf:   <http://xmlns.com/foaf/0.1/> .
+@prefix bst:    <https://github.com/josaum/brasil-stanag-ontology/ns#> .
+@prefix ext:    <https://github.com/josaum/brasil-stanag-ontology/ext#> .
+@prefix sig:    <https://github.com/josaum/brasil-stanag-ontology/sigilo#> .
+@prefix wd:     <http://www.wikidata.org/entity/> .
+
+# =============================================================================
+# Núcleo do vocabulário. Os conceitos e mapeamentos são GERADOS a partir de
+# data/*.csv por scripts/build.py (não edite ontology/generated/ à mão).
+# =============================================================================
+
+<https://github.com/josaum/brasil-stanag-ontology> a owl:Ontology ;
+    dct:title "Brasil–STANAG: mapeamento SKOS entre normas brasileiras e referências de padronização da OTAN"@pt-BR ,
+              "Brazil–STANAG: SKOS mapping between Brazilian regulations and NATO standardization references"@en ;
+    dct:creator bst:autor ;
+    dct:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dct:created "2026-11-06"^^xsd:date ;
+    owl:versionInfo "0.2.0" ;
+    rdfs:comment "Trabalho independente, somente fontes abertas. Sem aval da OTAN, do Ministério da Defesa, da ABIN ou de qualquer órgão. STANAGs descritos apenas por metadados públicos; texto integral não consultado. Mapeamentos são propostas de correspondência, nunca equivalência oficial."@pt-BR .
+
+bst:autor a prov:Agent , foaf:Person ;
+    foaf:name "Dionisio Chiuratto Agourakis" .
+
+# --- Classes -----------------------------------------------------------------
+bst:ReferenciaOTAN a owl:Class ;
+    rdfs:label "Referência de padronização da OTAN (STANAG, publicação aliada, código ou programa)"@pt-BR .
+bst:ConceitoBrasileiro a owl:Class ;
+    rdfs:label "Norma, sistema, órgão, equipamento ou conceito brasileiro"@pt-BR .
+bst:Mapeamento a owl:Class ; rdfs:subClassOf prov:Entity ;
+    rdfs:label "Mapeamento Brasil–OTAN"@pt-BR ;
+    rdfs:comment "Correspondência proposta entre um conceito brasileiro e uma referência OTAN, com relação SKOS, fonte e status."@pt-BR .
+
+# --- Propriedades ------------------------------------------------------------
+bst:conceitoBrasileiro a owl:ObjectProperty ; rdfs:domain bst:Mapeamento ; rdfs:range bst:ConceitoBrasileiro .
+bst:conceitoOTAN       a owl:ObjectProperty ; rdfs:domain bst:Mapeamento ; rdfs:range bst:ReferenciaOTAN .
+bst:relacao            a owl:ObjectProperty ; rdfs:domain bst:Mapeamento .
+bst:status             a owl:DatatypeProperty ; rdfs:domain bst:Mapeamento ;
+    rdfs:comment "'verificado': elementos conferidos em fonte pública; 'a-confirmar': falta confirmar algum elemento."@pt-BR .
+bst:numero             a owl:DatatypeProperty .
+bst:publicacaoAliada   a owl:DatatypeProperty .
+bst:area               a owl:DatatypeProperty .
+bst:tipo               a owl:DatatypeProperty .
+
+# --- Referência externa sem IRI estável ----------------------------------------
+ext:UNSPSC46 a skos:Concept ;
+    skos:prefLabel "UNSPSC segment 46 — Defense and Law Enforcement and Security and Safety Equipment and Supplies"@en ;
+    skos:inScheme wd:Q1361569 .
+
+# --- Graus de sigilo: dois esquemas SEM mapeamento entre si --------------------
+sig:EsquemaBrasil a skos:ConceptScheme ;
+    skos:prefLabel "Graus de sigilo — Lei 12.527/2011, art. 24"@pt-BR ;
+    dct:source <https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm> ;
+    rdfs:comment "Não há equivalência oficial declarada neste trabalho entre estes graus e os da OTAN. Nenhum mapeamento é feito de propósito."@pt-BR .
+sig:Ultrassecreta a skos:Concept ; skos:inScheme sig:EsquemaBrasil ; skos:prefLabel "Ultrassecreta"@pt-BR ; skos:scopeNote "Prazo máximo de restrição: 25 anos."@pt-BR .
+sig:Secreta       a skos:Concept ; skos:inScheme sig:EsquemaBrasil ; skos:prefLabel "Secreta"@pt-BR ;       skos:scopeNote "Prazo máximo de restrição: 15 anos."@pt-BR .
+sig:Reservada     a skos:Concept ; skos:inScheme sig:EsquemaBrasil ; skos:prefLabel "Reservada"@pt-BR ;     skos:scopeNote "Prazo máximo de restrição: 5 anos."@pt-BR .
+
+sig:EsquemaOTAN a skos:ConceptScheme ;
+    skos:prefLabel "NATO security classifications"@en ;
+    rdfs:comment "Níveis públicos de classificação da OTAN. Sem mapeamento para o esquema brasileiro."@pt-BR .
+sig:CosmicTopSecret   a skos:Concept ; skos:inScheme sig:EsquemaOTAN ; skos:prefLabel "COSMIC TOP SECRET"@en .
+sig:NatoSecret        a skos:Concept ; skos:inScheme sig:EsquemaOTAN ; skos:prefLabel "NATO SECRET"@en .
+sig:NatoConfidential  a skos:Concept ; skos:inScheme sig:EsquemaOTAN ; skos:prefLabel "NATO CONFIDENTIAL"@en .
+sig:NatoRestricted    a skos:Concept ; skos:inScheme sig:EsquemaOTAN ; skos:prefLabel "NATO RESTRICTED"@en .

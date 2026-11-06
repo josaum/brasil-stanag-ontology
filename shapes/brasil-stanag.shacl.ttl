@@ -2,28 +2,39 @@
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dct:  <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix bst:  <https://github.com/josaum/brasil-stanag-ontology/ns#> .
 
 bst:MapeamentoShape a sh:NodeShape ;
     sh:targetClass bst:Mapeamento ;
-    sh:property [ sh:path bst:conceitoBrasileiro ; sh:class bst:NormaBrasileira ; sh:minCount 1 ; sh:maxCount 1 ;
+    sh:property [ sh:path bst:conceitoBrasileiro ; sh:class bst:ConceitoBrasileiro ; sh:minCount 1 ; sh:maxCount 1 ;
                   sh:message "Cada mapeamento precisa de exatamente um conceito brasileiro." ] ;
-    sh:property [ sh:path bst:conceitoSTANAG ; sh:class bst:STANAG ; sh:minCount 1 ; sh:maxCount 1 ;
-                  sh:message "Cada mapeamento precisa de exatamente um conceito STANAG." ] ;
+    sh:property [ sh:path bst:conceitoOTAN ; sh:class bst:ReferenciaOTAN ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:message "Cada mapeamento precisa de exatamente uma referência OTAN." ] ;
     sh:property [ sh:path bst:relacao ; sh:minCount 1 ; sh:maxCount 1 ;
                   sh:in ( skos:relatedMatch skos:closeMatch skos:broadMatch skos:narrowMatch ) ;
-                  sh:message "Relação deve ser skos:relatedMatch, closeMatch, broadMatch ou narrowMatch (exactMatch não é permitido: não há equivalência oficial)." ] ;
+                  sh:message "Relação Brasil–OTAN deve ser relatedMatch, closeMatch, broadMatch ou narrowMatch (exactMatch proibido: não há equivalência oficial)." ] ;
     sh:property [ sh:path bst:status ; sh:minCount 1 ; sh:maxCount 1 ; sh:in ( "verificado" "a-confirmar" ) ;
                   sh:message "Status deve ser 'verificado' ou 'a-confirmar'." ] ;
-    sh:property [ sh:path dct:source ; sh:minCount 1 ;
-                  sh:message "Cada mapeamento precisa de ao menos uma fonte." ] .
+    sh:property [ sh:path dct:source ; sh:minCount 1 ; sh:message "Cada mapeamento precisa de ao menos uma fonte." ] ;
+    sh:property [ sh:path prov:wasAttributedTo ; sh:minCount 1 ; sh:message "Cada mapeamento precisa de autoria (PROV-O)." ] .
 
-bst:STANAGShape a sh:NodeShape ;
-    sh:targetClass bst:STANAG ;
-    sh:property [ sh:path skos:prefLabel ; sh:minCount 1 ; sh:message "Todo STANAG precisa de título público." ] ;
+bst:ReferenciaOTANShape a sh:NodeShape ;
+    sh:targetClass bst:ReferenciaOTAN ;
+    sh:property [ sh:path skos:prefLabel ; sh:minCount 1 ; sh:message "Toda referência OTAN precisa de título público." ] ;
     sh:property [ sh:path bst:area ; sh:minCount 1 ; sh:maxCount 1 ;
-                  sh:in ( "codificacao" "mobilidade" "geoespacial" "confidencialidade" "protecao-blindados" "arquitetura" ) ] .
+                  sh:in ( "organizacao" "codificacao" "logistica" "mobilidade" "geoespacial" "confidencialidade"
+                          "protecao-blindados" "municao-armamento" "enlace-dados" "aeronaves-nao-tripuladas"
+                          "combustiveis" "terminologia-simbologia" "arquitetura" ) ] .
 
-bst:NormaShape a sh:NodeShape ;
-    sh:targetClass bst:NormaBrasileira ;
-    sh:property [ sh:path skos:prefLabel ; sh:minCount 1 ] .
+bst:ConceitoBrasileiroShape a sh:NodeShape ;
+    sh:targetClass bst:ConceitoBrasileiro ;
+    sh:property [ sh:path skos:prefLabel ; sh:minCount 1 ] ;
+    sh:property [ sh:path bst:tipo ; sh:minCount 1 ; sh:maxCount 1 ] .
+
+bst:DatasetShape a sh:NodeShape ;
+    sh:targetClass dcat:Dataset ;
+    sh:property [ sh:path dct:identifier ; sh:minCount 1 ] ;
+    sh:property [ sh:path dct:title ; sh:minCount 1 ] ;
+    sh:property [ sh:path dct:subject ; sh:minCount 1 ; sh:message "Todo conjunto de dados precisa estar ligado a ao menos um conceito." ] .

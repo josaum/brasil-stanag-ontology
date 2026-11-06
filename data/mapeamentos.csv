@@ -1,0 +1,58 @@
+id|brasil|relacao|otan|status|fonte|nota
+m01|br:MinisterioDefesaSISCADE|closeMatch|st:STANAG3150|verificado|Catálogo público NSO; Ministério da Defesa (catalogação)|O SISCADE implementa no Brasil a classificação de suprimentos do NCS.
+m02|br:MinisterioDefesaSISCADE|closeMatch|st:STANAG3151|verificado|Catálogo público NSO; Ministério da Defesa (catalogação)|
+m03|br:MinisterioDefesaSISCADE|closeMatch|st:STANAG4177|verificado|Catálogo público NSO; Ministério da Defesa (catalogação)|
+m04|br:MinisterioDefesaSISCADE|closeMatch|st:NCS|verificado|Ministério da Defesa (catalogação)|Brasil participa do NCS como Tier 2.
+m05|br:RENAVAM|relatedMatch|st:NSN|verificado|Contribuição BN03-C01 ao Brasil Participativo (proposta 181303)|Proposta: correspondência opcional código RENAVAM ↔ NSN para veículos não bélicos usados por órgãos de defesa.
+m06|br:RENAVAM|relatedMatch|st:STANAG3151|verificado|Contribuição BN03-C01 ao Brasil Participativo (proposta 181303)|
+m07|br:CTB_art120_par2|relatedMatch|st:STANAG3151|verificado|https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm|Limite de escopo: veículos de uso bélico ficam fora do SNT; sua catalogação é feita pelas Forças.
+m08|br:NCM8710|relatedMatch|st:FSC2350|verificado|Sistema Harmonizado (OMA); Federal Supply Classification|Classificação aduaneira vs. de suprimento: finalidades diferentes.
+m09|br:NCM8710|relatedMatch|st:FSC2355|verificado|Sistema Harmonizado (OMA); Federal Supply Classification|
+m10|br:NCM93|relatedMatch|st:FSC10|verificado|Sistema Harmonizado (OMA); Federal Supply Classification|
+m11|br:NCM93|relatedMatch|st:FSC13|verificado|Sistema Harmonizado (OMA); Federal Supply Classification|
+m12|br:NCM3602|relatedMatch|st:FSC13|verificado|Sistema Harmonizado (OMA); Federal Supply Classification|
+m13|br:NCM3603|relatedMatch|st:FSC13|verificado|Sistema Harmonizado (OMA); Federal Supply Classification|
+m14|br:NCM8802|relatedMatch|st:FSC15|verificado|Sistema Harmonizado (OMA); Federal Supply Classification|
+m15|br:NCM8906|relatedMatch|st:FSC19|verificado|Sistema Harmonizado (OMA); Federal Supply Classification|
+m16|br:NCM86|relatedMatch|st:FSC22|verificado|Sistema Harmonizado (OMA); Federal Supply Classification|
+m17|br:NCM2710|relatedMatch|st:FSC91|verificado|Sistema Harmonizado (OMA); Federal Supply Classification|
+m18|br:NCM8526|relatedMatch|st:FSC58|verificado|Sistema Harmonizado (OMA); Federal Supply Classification|
+m19|br:MalhaFerroviaria|relatedMatch|st:FSC22|verificado|Federal Supply Classification|
+m20|br:Decreto10030|relatedMatch|st:FSC13|verificado|https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/decreto/d10030.htm|Munições e explosivos são produtos controlados pelo Exército.
+m21|br:GS1Brasil|relatedMatch|st:STANAG4329|a-confirmar|GS1; catálogo público NSO|Título do STANAG 4329 a confirmar.
+m22|br:NBR7188|relatedMatch|st:STANAG2021|verificado|Catálogo público NSO; ABNT|Ambos tratam de carga em pontes, com métodos diferentes; não há conversão oficial.
+m23|br:NBR7188|relatedMatch|st:MLC|verificado|ABNT; Wikidata Q956949|
+m24|br:SNV|relatedMatch|st:MLC|verificado|Contribuição BN02-C01 ao Brasil Participativo (proposta 182794)|Proposta: registrar MLC por obra de arte especial.
+m25|br:MalhaFerroviaria|relatedMatch|st:STANAG2468|verificado|Catálogo público NSO; Plano Setorial de Transporte Ferroviário (MPOR, 2026)|
+m26|br:SNV|relatedMatch|st:STANAG2174|verificado|Catálogo público NSO; Plano Setorial de Transporte Rodoviário (MPOR, 2026)|
+m27|br:SINAMOB|relatedMatch|st:STANAG2174|verificado|https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/lei/l11631.htm|
+m28|br:SINAMOB|relatedMatch|st:STANAG2468|verificado|https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/lei/l11631.htm|
+m29|br:SIRGAS2000|relatedMatch|st:STANAG2211|verificado|Catálogo público NSO; IBGE|STANAG 2211 adota o WGS 84.
+m30|br:SIRGAS2000|relatedMatch|st:WGS84|verificado|IBGE; registro EPSG (4674 e 4326)|Compatíveis no nível métrico; alta precisão exige transformação documentada.
+m31|br:SCN_UTM|relatedMatch|st:MGRS|verificado|IBGE; Wikidata Q1922471|O MGRS é construído sobre as projeções UTM/UPS.
+m32|br:ETEDGV|relatedMatch|st:STANAG7074|a-confirmar|CONCAR; Wikidata Q26710972|Correspondência temática (estruturação de dados geoespaciais).
+m33|br:CodigoPaisBRA|relatedMatch|st:STANAG1059|a-confirmar|Wikidata Q1394114|Códigos de país da OTAN e ISO 3166-1 alfa-3.
+m34|br:LAI|relatedMatch|st:STANAG4774|verificado|https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm|Relaciona apenas o mecanismo de rotulagem; não há equivalência oficial de graus de sigilo.
+m35|br:Decreto7845|relatedMatch|st:STANAG4774|verificado|https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/decreto/d7845.htm|Idem.
+m36|br:LGPD|relatedMatch|st:STANAG4774|a-confirmar|https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm|Hipótese: rótulos para dados pessoais.
+m37|br:ICPBrasil|relatedMatch|st:STANAG4778|verificado|Catálogo público NSO; ITI (ICP-Brasil)|Assinatura ICP-Brasil como possível mecanismo de vínculo de rótulos.
+m38|br:ePMG|relatedMatch|st:NCMS|a-confirmar|Governo Digital (e-PMG); NSO|Correspondência temática (metadados).
+m39|br:NBR15000|relatedMatch|st:STANAG4569|verificado|Catálogo público NSO; ABNT|Escopos diferentes (blindagem em geral vs. ocupantes de viaturas militares); níveis não equivalentes.
+m40|br:Decreto10030|relatedMatch|st:STANAG4569|verificado|https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/decreto/d10030.htm|Blindagem é produto controlado pelo Exército.
+m41|br:NBR15000|relatedMatch|st:STANAG2920|verificado|ABNT; Wikidata Q25447921|Proteção balística pessoal; níveis não equivalentes.
+m42|br:Decreto10030|relatedMatch|st:STANAG2920|verificado|https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/decreto/d10030.htm|Coletes balísticos são produtos controlados.
+m43|br:IA2|relatedMatch|st:STANAG4172|verificado|Wikidata Q14807505; Q238456|Versão do IA2 em 5,56 mm.
+m44|br:IA2|relatedMatch|st:STANAG2310|verificado|Wikidata Q14807505; Q259210|Versão do IA2 em 7,62 mm.
+m45|br:LinkBR2|relatedMatch|st:STANAG5516|verificado|Wikidata Q108265833; Q544907|Ambos são enlaces de dados táticos; não se afirma compatibilidade.
+m46|br:RBACE94|relatedMatch|st:STANAG4671|verificado|ANAC; Wikidata Q24589689|Regulação civil vs. aeronavegabilidade militar.
+m47|br:RBACE94|relatedMatch|st:STANAG4586|a-confirmar|ANAC; Wikidata Q7394640|Correspondência temática.
+m48|br:NCM8806|relatedMatch|st:STANAG4671|a-confirmar|Sistema Harmonizado 2022; Wikidata Q24589689|Classificação aduaneira de UAV vs. requisito de aeronavegabilidade.
+m49|br:QAV1|closeMatch|st:F35|verificado|ANP (especificação QAV-1)|QAV-1 é o equivalente nacional ao Jet A-1.
+m50|br:QAV1|relatedMatch|st:F34|verificado|ANP; Wikidata Q905468|F-34 é Jet A-1 com aditivos militares.
+m51|br:QAV1|relatedMatch|st:STANAG1135|a-confirmar|ANP; catálogo público NSO|
+m52|br:MD35G01|closeMatch|st:AAP6|verificado|Ministério da Defesa (MD35-G-01); NSO (AAP-6)|Correspondência entre documentos (glossários militares oficiais), não entre termos.
+m53|br:MD33M02|relatedMatch|st:STANAG2019|a-confirmar|Ministério da Defesa; Wikidata Q694745|Número e título do manual brasileiro a confirmar.
+m54|br:EstatutoMilitares|relatedMatch|st:STANAG2116|verificado|https://www.planalto.gov.br/ccivil_03/leis/l6880.htm|Não se declara equivalência posto a posto.
+m55|br:ePING|relatedMatch|st:ADatP34|a-confirmar|Governo Digital (e-PING); NSO (ADatP-34)|Ambos são catálogos de padrões de interoperabilidade.
+m56|br:SINAMOB|relatedMatch|st:NAFv4|a-confirmar|NATO (NAF v4)|Hipótese de trabalho: NAF v4 para descrever a arquitetura de mobilização.
+m57|br:PaiolExplosivos|relatedMatch|st:FSC13|verificado|Federal Supply Classification; NRM-16|

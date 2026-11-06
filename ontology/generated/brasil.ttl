@@ -1,0 +1,313 @@
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:    <http://purl.org/dc/terms/> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix dcat:   <http://www.w3.org/ns/dcat#> .
+@prefix org:    <http://www.w3.org/ns/org#> .
+@prefix schema: <https://schema.org/> .
+@prefix bst:    <https://github.com/josaum/brasil-stanag-ontology/ns#> .
+@prefix br:     <https://github.com/josaum/brasil-stanag-ontology/br#> .
+@prefix st:     <https://github.com/josaum/brasil-stanag-ontology/stanag#> .
+@prefix ext:    <https://github.com/josaum/brasil-stanag-ontology/ext#> .
+@prefix ds:     <https://github.com/josaum/brasil-stanag-ontology/dataset#> .
+@prefix wd:     <http://www.wikidata.org/entity/> .
+@prefix cco:    <https://www.commoncoreontologies.org/> .
+@prefix epsg:   <http://www.opengis.net/def/crs/EPSG/0/> .
+
+
+br:Brasil a bst:ConceitoBrasileiro , skos:Concept , schema:Country ;
+    skos:prefLabel "Brasil"@pt-BR ;
+    bst:tipo "pais" ;
+    skos:exactMatch wd:Q155 ;
+    skos:note "Não é membro nem parceiro formal da OTAN; designado \"major non-NATO ally\" pelos EUA em 2019 (Wikidata Q145560)."@pt-BR .
+
+br:MinisterioDefesaSISCADE a bst:ConceitoBrasileiro , skos:Concept ;
+    skos:prefLabel "Sistema de Catalogação de Defesa (SISCADE) — Ministério da Defesa"@pt-BR ;
+    bst:tipo "sistema" ;
+    skos:note "Brasil participa do NCS como país Tier 2 desde 2002, segundo o Ministério da Defesa."@pt-BR .
+
+br:RENAVAM a bst:ConceitoBrasileiro , skos:Concept ;
+    skos:prefLabel "RENAVAM — código marca/modelo/versão de veículos"@pt-BR ;
+    bst:tipo "sistema" .
+
+br:CTB a bst:ConceitoBrasileiro , skos:Concept ;
+    skos:prefLabel "Código de Trânsito Brasileiro (Lei 9.503/1997)"@pt-BR ;
+    bst:tipo "lei" ;
+    skos:exactMatch wd:Q10263241 ;
+    dct:source <https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm> .
+
+br:CTB_art120_par2 a bst:ConceitoBrasileiro , skos:Concept ;
+    skos:prefLabel "CTB, art. 120, §2º — veículo de uso bélico dispensado de registro"@pt-BR ;
+    bst:tipo "dispositivo" ;
+    dct:source <https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm> .
+
+br:SINAMOB a bst:ConceitoBrasileiro , skos:Concept ;
+    skos:prefLabel "Sistema Nacional de Mobilização (Lei 11.631/2007)"@pt-BR ;
+    bst:tipo "lei" ;
+    dct:source <https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/lei/l11631.htm> .
+
+br:NBR7188 a bst:ConceitoBrasileiro , skos:Concept ;
+    skos:prefLabel "ABNT NBR 7188 — carga móvel rodoviária e de pedestres em pontes"@pt-BR ;
+    bst:tipo "norma-tecnica" .
+
+br:NBR15000 a bst:ConceitoBrasileiro , skos:Concept ;
+    skos:prefLabel "ABNT NBR 15000 — blindagens para impactos balísticos"@pt-BR ;
+    bst:tipo "norma-tecnica" .
+
+br:Decreto10030 a bst:ConceitoBrasileiro , skos:Concept ;
+    skos:prefLabel "Decreto 10.030/2019 — Regulamento de Produtos Controlados"@pt-BR ;
+    bst:tipo "decreto" ;
+    dct:source <https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/decreto/d10030.htm> .
+
+br:MalhaFerroviaria a bst:ConceitoBrasileiro , skos:Concept ;
+    skos:prefLabel "Inventário da malha ferroviária federal (bitola, carga por eixo, gabarito)"@pt-BR ;
+    bst:tipo "conceito" .
+
+br:SNV a bst:ConceitoBrasileiro , skos:Concept ;
+    skos:prefLabel "Sistema Nacional de Viação — rede rodoviária federal"@pt-BR ;
+    bst:tipo "conceito" .
+
+br:PFM a bst:ConceitoBrasileiro , skos:Concept ;
+    skos:prefLabel "Plano de Fechamento de Mina (ANM)"@pt-BR ;
+    bst:tipo "conceito" ;
+    skos:note "Em revisão por consulta pública da ANM (2026)."@pt-BR .
+
+br:PaiolExplosivos a bst:ConceitoBrasileiro , skos:Concept ;
+    skos:prefLabel "Paiol de explosivos em mineração (NRM-16)"@pt-BR ;
+    bst:tipo "conceito" .
+
+br:SIRGAS2000 a bst:ConceitoBrasileiro , skos:Concept ;
+    skos:prefLabel "SIRGAS2000 — referencial geodésico oficial do Brasil"@pt-BR ;
+    bst:tipo "referencial" ;
+    skos:note "IBGE; EPSG:4674."@pt-BR .
+
+br:SCN_UTM a bst:ConceitoBrasileiro , skos:Concept ;
+    skos:prefLabel "Sistema Cartográfico Nacional — projeção UTM"@pt-BR ;
+    bst:tipo "referencial" .
+
+br:ETEDGV a bst:ConceitoBrasileiro , skos:Concept ;
+    skos:prefLabel "ET-EDGV — Especificação Técnica para Estruturação de Dados Geoespaciais Vetoriais (CONCAR)"@pt-BR ;
+    bst:tipo "norma-tecnica" .
+
+br:LAI a bst:ConceitoBrasileiro , skos:Concept ;
+    skos:prefLabel "Lei de Acesso à Informação (Lei 12.527/2011)"@pt-BR ;
+    bst:tipo "lei" ;
+    skos:exactMatch wd:Q18470527 ;
+    dct:source <https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm> .
+
+br:Decreto7845 a bst:ConceitoBrasileiro , skos:Concept ;
+    skos:prefLabel "Decreto 7.845/2012 — tratamento de informação classificada"@pt-BR ;
+    bst:tipo "decreto" ;
+    dct:source <https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/decreto/d7845.htm> .
+
+br:LGPD a bst:ConceitoBrasileiro , skos:Concept ;
+    skos:prefLabel "Lei Geral de Proteção de Dados (Lei 13.709/2018)"@pt-BR ;
+    bst:tipo "lei" ;
+    skos:exactMatch wd:Q56355493 ;
+    dct:source <https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm> .
+
+br:ICPBrasil a bst:ConceitoBrasileiro , skos:Concept ;
+    skos:prefLabel "Infraestrutura de Chaves Públicas Brasileira (ICP-Brasil)"@pt-BR ;
+    bst:tipo "infraestrutura" ;
+    skos:exactMatch wd:Q10299348 .
+
+br:ePING a bst:ConceitoBrasileiro , skos:Concept ;
+    skos:prefLabel "e-PING — Padrões de Interoperabilidade de Governo Eletrônico"@pt-BR ;
+    bst:tipo "padrao" .
+
+br:ePMG a bst:ConceitoBrasileiro , skos:Concept ;
+    skos:prefLabel "e-PMG — Padrão de Metadados do Governo Eletrônico"@pt-BR ;
+    bst:tipo "padrao" .
+
+br:GS1Brasil a bst:ConceitoBrasileiro , skos:Concept , org:Organization ;
+    skos:prefLabel "GS1 Brasil — códigos de barras (GTIN)"@pt-BR ;
+    bst:tipo "organizacao" ;
+    skos:note "Filial nacional da GS1 (Wikidata Q731100)."@pt-BR .
+
+br:QAV1 a bst:ConceitoBrasileiro , skos:Concept ;
+    skos:prefLabel "QAV-1 — querosene de aviação (especificação ANP)"@pt-BR ;
+    bst:tipo "especificacao" ;
+    skos:note "Equivalente nacional ao Jet A-1."@pt-BR .
+
+br:RBACE94 a bst:ConceitoBrasileiro , skos:Concept ;
+    skos:prefLabel "RBAC-E nº 94 — aeronaves não tripuladas de uso civil (ANAC)"@pt-BR ;
+    bst:tipo "regulamento" .
+
+br:MD35G01 a bst:ConceitoBrasileiro , skos:Concept ;
+    skos:prefLabel "MD35-G-01 — Glossário das Forças Armadas (Ministério da Defesa)"@pt-BR ;
+    bst:tipo "doutrina" .
+
+br:MD33M02 a bst:ConceitoBrasileiro , skos:Concept ;
+    skos:prefLabel "MD33-M-02 — Manual de abreviaturas, siglas, símbolos e convenções cartográficas das Forças Armadas"@pt-BR ;
+    bst:tipo "doutrina" ;
+    skos:note "Número e título a confirmar."@pt-BR .
+
+br:EstatutoMilitares a bst:ConceitoBrasileiro , skos:Concept ;
+    skos:prefLabel "Estatuto dos Militares (Lei 6.880/1980) — hierarquia militar"@pt-BR ;
+    bst:tipo "lei" ;
+    dct:source <https://www.planalto.gov.br/ccivil_03/leis/l6880.htm> .
+
+br:CodigoPaisBRA a bst:ConceitoBrasileiro , skos:Concept ;
+    skos:prefLabel "Código de país BRA (ISO 3166-1 alfa-3)"@pt-BR ;
+    bst:tipo "codigo" ;
+    skos:exactMatch wd:Q1341492 ;
+    skos:note "O item do Wikidata é o padrão ISO 3166-1 alfa-3."@pt-BR .
+
+br:NCM a bst:ConceitoBrasileiro , skos:Concept ;
+    skos:prefLabel "Nomenclatura Comum do Mercosul (NCM)"@pt-BR ;
+    bst:tipo "classificacao" ;
+    skos:exactMatch wd:Q10337289 ;
+    skos:note "Baseada no Sistema Harmonizado (Wikidata Q2294130)."@pt-BR .
+
+br:NCM8710 a bst:ConceitoBrasileiro , skos:Concept ;
+    skos:prefLabel "NCM/SH 87.10 — Veículos e carros blindados de combate, armados ou não, e suas partes"@pt-BR ;
+    bst:tipo "classificacao" .
+
+br:NCM93 a bst:ConceitoBrasileiro , skos:Concept ;
+    skos:prefLabel "NCM/SH capítulo 93 — Armas e munições; suas partes e acessórios"@pt-BR ;
+    bst:tipo "classificacao" .
+
+br:NCM3602 a bst:ConceitoBrasileiro , skos:Concept ;
+    skos:prefLabel "NCM/SH 36.02 — Explosivos preparados"@pt-BR ;
+    bst:tipo "classificacao" .
+
+br:NCM3603 a bst:ConceitoBrasileiro , skos:Concept ;
+    skos:prefLabel "NCM/SH 36.03 — Estopins, cordões detonantes, espoletas, detonadores e afins"@pt-BR ;
+    bst:tipo "classificacao" .
+
+br:NCM8802 a bst:ConceitoBrasileiro , skos:Concept ;
+    skos:prefLabel "NCM/SH 88.02 — Aeronaves (helicópteros, aviões) e veículos espaciais"@pt-BR ;
+    bst:tipo "classificacao" .
+
+br:NCM8806 a bst:ConceitoBrasileiro , skos:Concept ;
+    skos:prefLabel "NCM/SH 88.06 — Veículos aéreos não tripulados (SH 2022)"@pt-BR ;
+    bst:tipo "classificacao" .
+
+br:NCM8906 a bst:ConceitoBrasileiro , skos:Concept ;
+    skos:prefLabel "NCM/SH 89.06 — Outras embarcações, incluindo navios de guerra"@pt-BR ;
+    bst:tipo "classificacao" .
+
+br:NCM86 a bst:ConceitoBrasileiro , skos:Concept ;
+    skos:prefLabel "NCM/SH capítulo 86 — Veículos e material para vias férreas"@pt-BR ;
+    bst:tipo "classificacao" .
+
+br:NCM2710 a bst:ConceitoBrasileiro , skos:Concept ;
+    skos:prefLabel "NCM/SH 27.10 — Óleos de petróleo (inclui querosene de aviação e diesel)"@pt-BR ;
+    bst:tipo "classificacao" .
+
+br:NCM8526 a bst:ConceitoBrasileiro , skos:Concept ;
+    skos:prefLabel "NCM/SH 85.26 — Aparelhos de radiodetecção (radar), radionavegação e radiotelecomando"@pt-BR ;
+    bst:tipo "classificacao" .
+
+br:LinkBR2 a bst:ConceitoBrasileiro , skos:Concept ;
+    skos:prefLabel "Link-BR2 — enlace de dados tático brasileiro"@pt-BR ;
+    bst:tipo "sistema" ;
+    skos:exactMatch wd:Q108265833 .
+
+br:IA2 a bst:ConceitoBrasileiro , skos:Concept ;
+    skos:prefLabel "Fuzil IMBEL IA2"@pt-BR ;
+    bst:tipo "equipamento" ;
+    skos:exactMatch wd:Q14807505 ;
+    skos:note "Versões em 5,56 mm e 7,62 mm."@pt-BR .
+
+br:Guarani a bst:ConceitoBrasileiro , skos:Concept ;
+    skos:prefLabel "VBTP-MR Guarani"@pt-BR ;
+    bst:tipo "equipamento" ;
+    skos:exactMatch wd:Q7906606 .
+
+br:C390 a bst:ConceitoBrasileiro , skos:Concept ;
+    skos:prefLabel "Embraer C-390 Millennium"@pt-BR ;
+    bst:tipo "equipamento" ;
+    skos:exactMatch wd:Q975281 .
+
+br:AstrosII a bst:ConceitoBrasileiro , skos:Concept ;
+    skos:prefLabel "Astros II — sistema lançador múltiplo de foguetes"@pt-BR ;
+    bst:tipo "equipamento" ;
+    skos:exactMatch wd:Q195169 .
+
+br:ExercitoBrasileiro a bst:ConceitoBrasileiro , skos:Concept , schema:GovernmentOrganization , org:Organization ;
+    skos:prefLabel "Exército Brasileiro"@pt-BR ;
+    bst:tipo "forca-armada" ;
+    skos:exactMatch wd:Q2292358 .
+
+br:MarinhaDoBrasil a bst:ConceitoBrasileiro , skos:Concept , schema:GovernmentOrganization , org:Organization ;
+    skos:prefLabel "Marinha do Brasil"@pt-BR ;
+    bst:tipo "forca-armada" ;
+    skos:exactMatch wd:Q1750688 .
+
+br:ForcaAereaBrasileira a bst:ConceitoBrasileiro , skos:Concept , schema:GovernmentOrganization , org:Organization ;
+    skos:prefLabel "Força Aérea Brasileira"@pt-BR ;
+    bst:tipo "forca-armada" ;
+    skos:exactMatch wd:Q634542 .
+
+br:ABIN a bst:ConceitoBrasileiro , skos:Concept , schema:GovernmentOrganization , org:Organization ;
+    skos:prefLabel "Agência Brasileira de Inteligência (ABIN)"@pt-BR ;
+    bst:tipo "orgao-publico" ;
+    skos:exactMatch wd:Q399639 .
+
+br:IBGE a bst:ConceitoBrasileiro , skos:Concept , schema:GovernmentOrganization , org:Organization ;
+    skos:prefLabel "Instituto Brasileiro de Geografia e Estatística (IBGE)"@pt-BR ;
+    bst:tipo "orgao-publico" ;
+    skos:exactMatch wd:Q268072 .
+
+br:ANAC a bst:ConceitoBrasileiro , skos:Concept , schema:GovernmentOrganization , org:Organization ;
+    skos:prefLabel "Agência Nacional de Aviação Civil (ANAC)"@pt-BR ;
+    bst:tipo "orgao-publico" ;
+    skos:exactMatch wd:Q4314917 .
+
+br:DNIT a bst:ConceitoBrasileiro , skos:Concept , schema:GovernmentOrganization , org:Organization ;
+    skos:prefLabel "Departamento Nacional de Infraestrutura de Transportes (DNIT)"@pt-BR ;
+    bst:tipo "orgao-publico" ;
+    skos:exactMatch wd:Q10265187 .
+
+br:ANTT a bst:ConceitoBrasileiro , skos:Concept , schema:GovernmentOrganization , org:Organization ;
+    skos:prefLabel "Agência Nacional de Transportes Terrestres (ANTT)"@pt-BR ;
+    bst:tipo "orgao-publico" ;
+    skos:exactMatch wd:Q9592640 .
+
+br:ANM a bst:ConceitoBrasileiro , skos:Concept , schema:GovernmentOrganization , org:Organization ;
+    skos:prefLabel "Agência Nacional de Mineração (ANM)"@pt-BR ;
+    bst:tipo "orgao-publico" ;
+    skos:exactMatch wd:Q16143294 .
+
+br:CGU a bst:ConceitoBrasileiro , skos:Concept , schema:GovernmentOrganization , org:Organization ;
+    skos:prefLabel "Controladoria-Geral da União (CGU)"@pt-BR ;
+    bst:tipo "orgao-publico" ;
+    skos:exactMatch wd:Q3624988 .
+
+br:ESG a bst:ConceitoBrasileiro , skos:Concept , schema:GovernmentOrganization , org:Organization ;
+    skos:prefLabel "Escola Superior de Guerra"@pt-BR ;
+    bst:tipo "orgao-publico" ;
+    skos:exactMatch wd:Q9296788 .
+
+br:IMBEL a bst:ConceitoBrasileiro , skos:Concept , schema:Corporation , org:Organization ;
+    skos:prefLabel "Indústria de Material Bélico do Brasil (IMBEL)"@pt-BR ;
+    bst:tipo "empresa-publica" ;
+    skos:exactMatch wd:Q1660051 .
+
+br:EMGEPRON a bst:ConceitoBrasileiro , skos:Concept , schema:Corporation , org:Organization ;
+    skos:prefLabel "Empresa Gerencial de Projetos Navais (EMGEPRON)"@pt-BR ;
+    bst:tipo "empresa-publica" ;
+    skos:exactMatch wd:Q5323494 .
+
+br:Embraer a bst:ConceitoBrasileiro , skos:Concept , schema:Corporation , org:Organization ;
+    skos:prefLabel "Embraer"@pt-BR ;
+    bst:tipo "empresa" ;
+    skos:exactMatch wd:Q105557 .
+
+br:Avibras a bst:ConceitoBrasileiro , skos:Concept , schema:Corporation , org:Organization ;
+    skos:prefLabel "Avibras"@pt-BR ;
+    bst:tipo "empresa" ;
+    skos:exactMatch wd:Q4828757 .
+
+br:END a bst:ConceitoBrasileiro , skos:Concept ;
+    skos:prefLabel "Estratégia Nacional de Defesa"@pt-BR ;
+    bst:tipo "politica" ;
+    skos:exactMatch wd:Q10276570 .
+
+br:BID a bst:ConceitoBrasileiro , skos:Concept ;
+    skos:prefLabel "Base Industrial de Defesa"@pt-BR ;
+    bst:tipo "conceito" ;
+    skos:exactMatch wd:Q124466543 .

@@ -1,0 +1,56 @@
+curie|numero|titulo|publicacao|area|wikidata|wd_rel|nota
+st:OTAN||North Atlantic Treaty Organization (NATO)||organizacao|Q7184|exact|
+st:NSO||NATO Standardization Office||organizacao|Q61043196|exact|Responsável pelo catálogo público de STANAGs.
+st:NCS||NATO Codification System||codificacao|Q6952579|exact|
+st:NSN||NATO Stock Number||codificacao|Q357602|exact|
+st:NCAGE||NATO Commercial and Government Entity code (NCAGE)||codificacao|Q1115390|exact|
+st:STANAG3150|3150|Codification — Uniform System of Supply Classification|ACodP-1|codificacao|||
+st:STANAG3151|3151|Codification — Uniform System of Item Identification|ACodP-1|codificacao|||
+st:STANAG4177|4177|Codification — Uniform System of Data Acquisition|ACodP-1|codificacao|||
+st:FSC10||Supply group 10 — Weapons||codificacao|||Títulos de grupos/classes de suprimento conforme a Federal Supply Classification, usada pelo NCS.
+st:FSC13||Supply group 13 — Ammunition and Explosives||codificacao|||
+st:FSC15||Supply group 15 — Aircraft and Airframe Structural Components||codificacao|||
+st:FSC19||Supply group 19 — Ships, Small Craft, Pontoons, and Floating Docks||codificacao|||
+st:FSC22||Supply group 22 — Railway Equipment||codificacao|||
+st:FSC23||Supply group 23 — Ground Effect Vehicles, Motor Vehicles, Trailers, and Cycles||codificacao|||
+st:FSC2350||Supply class 2350 — Combat, Assault, and Tactical Vehicles, Tracked||codificacao|||
+st:FSC2355||Supply class 2355 — Combat, Assault, and Tactical Vehicles, Wheeled||codificacao|||
+st:FSC58||Supply group 58 — Communication, Detection, and Coherent Radiation Equipment||codificacao|||
+st:FSC91||Supply group 91 — Fuels, Lubricants, Oils, and Waxes||codificacao|||
+st:STANAG4329|4329|NATO Standard Bar Code Symbologies||logistica|||Título a confirmar no catálogo NSO.
+st:MLC||Military Load Classification (MLC)||mobilidade|Q956949|exact|
+st:STANAG2021|2021|Military Load Classification of Bridges, Ferries, Rafts and Vehicles||mobilidade|||
+st:STANAG2468|2468|Technical Aspects of the Transport of Military Materials by Railroad|AMovP-4|mobilidade|||
+st:STANAG2174|2174|Military Routes and Route/Road Networks|AMovP-1|mobilidade|||
+st:STANAG2211|2211|Geodetic Datums, Projections, Grids and Grid References|AGeoP-21|geoespacial|||
+st:WGS84||World Geodetic System 1984 (WGS 84)||geoespacial|Q215848|related|Item do Wikidata cobre a família World Geodetic System.
+st:MGRS||Military Grid Reference System (MGRS)||geoespacial|Q1922471|exact|Baseado nas projeções UTM/UPS.
+st:STANAG7074|7074|Digital Geographic Information Exchange Standard (DIGEST)|AGeoP-3|geoespacial|Q26710972|related|Item do Wikidata descreve a 1ª edição.
+st:STANAG1059|1059|Letter Codes for Geographical Entities||geoespacial|Q1394114|related|Item do Wikidata é a lista de códigos de país da OTAN.
+st:STANAG4774|4774|Confidentiality Metadata Label Syntax|ADatP-4774|confidencialidade|||
+st:STANAG4778|4778|Metadata Binding Mechanism|ADatP-4778|confidencialidade|||
+st:NCMS||NATO Core Metadata Specification (NCMS)|ADatP-5636|confidencialidade|||Publicação a confirmar.
+st:STANAG4569|4569|Protection Levels for Occupants of Armoured Vehicles|AEP-55|protecao-blindados|Q1639446|exact|
+st:STANAG2920|2920|Classification of Personal Armour||protecao-blindados|Q25447921|exact|
+st:STANAG4172|4172|Munição 5,56 mm (padrão OTAN)||municao-armamento|Q238456|related|Título descritivo, não oficial. Wikidata: cartucho 5.56×45mm NATO.
+st:STANAG2310|2310|Munição 7,62 mm (padrão OTAN)||municao-armamento|Q259210|related|Título descritivo, não oficial. Wikidata: cartucho 7.62×51mm NATO.
+st:STANAG4090|4090|Munição 9 mm (padrão OTAN)||municao-armamento|Q135550|related|Título descritivo, não oficial. Wikidata: cartucho 9×19mm Parabellum.
+st:STANAG4383|4383|Munição 12,7 mm (padrão OTAN)||municao-armamento|Q171628|related|Título descritivo, não oficial. Wikidata: cartucho .50 BMG.
+st:STANAG4694|4694|NATO Accessory Rail||municao-armamento|Q1541833|related|Wikidata: trilho Picatinny (MIL-STD-1913), antecessor relacionado.
+st:STANAG4179||STANAG magazine (proposta não ratificada)||municao-armamento|Q2756163|exact|
+st:STANAG5516|5516|Enlace de dados tático Link 16||enlace-dados|Q544907|related|Título descritivo, não oficial.
+st:STANAG5511|5511|Enlace de dados tático Link 11||enlace-dados|Q336623|related|Título descritivo, não oficial.
+st:STANAG5522|5522|Enlace de dados tático Link 22||enlace-dados|Q1475038|related|Título descritivo, não oficial.
+st:STANAG4586|4586|Standard Interfaces of UAV Control System (UCS) for NATO UAV Interoperability||aeronaves-nao-tripuladas|Q7394640|exact|
+st:STANAG4671|4671|UAV System Airworthiness Requirements (USAR)||aeronaves-nao-tripuladas|Q24589689|exact|
+st:STANAG1135|1135|Interchangeability of Fuels, Lubricants and Associated Products||combustiveis|||
+st:F34||Código OTAN de combustível F-34 (JP-8)||combustiveis|Q905468|related|
+st:F35||Código OTAN de combustível F-35 (Jet A-1)||combustiveis|||
+st:STANAG2019|2019|NATO Joint Military Symbology|APP-6|terminologia-simbologia|Q694745|exact|
+st:AAP6||NATO Glossary of Terms and Definitions|AAP-6|terminologia-simbologia|||
+st:STANAG2116|2116|NATO Codes for Grades of Military Personnel||terminologia-simbologia|Q654899|related|
+st:AlfabetoFonetico||NATO/ICAO spelling alphabet||terminologia-simbologia|Q190194|exact|
+st:NAFv4||NATO Architecture Framework, version 4||arquitetura|Q6952577|exact|
+st:ADatP34||NATO Interoperability Standards and Profiles (NISP)|ADatP-34|arquitetura|||
+st:MIP||Multilateral Interoperability Programme (MIP)||arquitetura|Q4298909|exact|Programa multinacional, não órgão da OTAN.
+st:MIM||MIP Information Model (MIM)||arquitetura|||Sucessor do JC3IEDM.

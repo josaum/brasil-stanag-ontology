@@ -1,0 +1,102 @@
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:    <http://purl.org/dc/terms/> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix dcat:   <http://www.w3.org/ns/dcat#> .
+@prefix org:    <http://www.w3.org/ns/org#> .
+@prefix schema: <https://schema.org/> .
+@prefix bst:    <https://github.com/josaum/brasil-stanag-ontology/ns#> .
+@prefix br:     <https://github.com/josaum/brasil-stanag-ontology/br#> .
+@prefix st:     <https://github.com/josaum/brasil-stanag-ontology/stanag#> .
+@prefix ext:    <https://github.com/josaum/brasil-stanag-ontology/ext#> .
+@prefix ds:     <https://github.com/josaum/brasil-stanag-ontology/dataset#> .
+@prefix wd:     <http://www.wikidata.org/entity/> .
+@prefix cco:    <https://www.commoncoreontologies.org/> .
+@prefix epsg:   <http://www.opengis.net/def/crs/EPSG/0/> .
+
+
+ds:e6f5cf28-7d97-405f-a5ee-9f93e870eb6e a dcat:Dataset ;
+    dct:identifier "e6f5cf28-7d97-405f-a5ee-9f93e870eb6e" ;
+    dct:title "Mobilização Militar - Exército"@pt-BR ;
+    dct:publisher "controladoria-geral-da-uniao" ;
+    dcat:landingPage <https://dados.gov.br/dados/conjuntos-dados/mobilizao-militar---exrcito> ;
+    dct:subject br:SINAMOB .
+
+ds:b27368d3-5bd1-4346-8879-d8a34dd36de4 a dcat:Dataset ;
+    dct:identifier "b27368d3-5bd1-4346-8879-d8a34dd36de4" ;
+    dct:title "Equipamentos de Engenharia ativos no Exército Brasileiro (EB)"@pt-BR ;
+    dct:publisher "exercito-brasileiro" ;
+    dcat:landingPage <https://dados.gov.br/dados/conjuntos-dados/equipamentos-de-engenharia-ativos-no-exercito-brasileiro> ;
+    dct:subject st:MLC .
+
+ds:7a4ab2d2-94c2-4142-af18-feac898eae90 a dcat:Dataset ;
+    dct:identifier "7a4ab2d2-94c2-4142-af18-feac898eae90" ;
+    dct:title "Construção de Ferrovias"@pt-BR ;
+    dct:publisher "controladoria-geral-da-uniao" ;
+    dcat:landingPage <https://dados.gov.br/dados/conjuntos-dados/mpog_transporte_ferroviario> ;
+    dct:subject br:MalhaFerroviaria .
+
+ds:914c2a38-2f5d-4189-b0fd-f0a711cb17b2 a dcat:Dataset ;
+    dct:identifier "914c2a38-2f5d-4189-b0fd-f0a711cb17b2" ;
+    dct:title "Ferrovia"@pt-BR ;
+    dct:publisher "controladoria-geral-da-uniao" ;
+    dcat:landingPage <https://dados.gov.br/dados/conjuntos-dados/ferrovia1> ;
+    dct:subject br:MalhaFerroviaria .
+
+ds:36fb1b30-51d0-4068-9fb2-71e7898e4ede a dcat:Dataset ;
+    dct:identifier "36fb1b30-51d0-4068-9fb2-71e7898e4ede" ;
+    dct:title "Projetos de Concessão de Ferrovias"@pt-BR ;
+    dct:publisher "controladoria-geral-da-uniao" ;
+    dcat:landingPage <https://dados.gov.br/dados/conjuntos-dados/projeto-concessao-ferrovias> ;
+    dct:subject br:MalhaFerroviaria .
+
+ds:6e14b1aa-d629-4143-88ed-8f8b680c3209 a dcat:Dataset ;
+    dct:identifier "6e14b1aa-d629-4143-88ed-8f8b680c3209" ;
+    dct:title "Frota de Veículos por Espécie de 2024"@pt-BR ;
+    dct:publisher "controladoria-geral-da-uniao" ;
+    dcat:landingPage <https://dados.gov.br/dados/conjuntos-dados/frota-de-veiculos-por-especie-de-2024> ;
+    dct:subject br:RENAVAM .
+
+ds:06d9579c-d0d3-45ab-8ffb-8439168e7471 a dcat:Dataset ;
+    dct:identifier "06d9579c-d0d3-45ab-8ffb-8439168e7471" ;
+    dct:title "Aeronaves - Drones cadastrados"@pt-BR ;
+    dct:publisher "agencia-nacional-de-aviacao-civil-anac" ;
+    dcat:landingPage <https://dados.gov.br/dados/conjuntos-dados/aeronaves-drones-cadastrados> ;
+    dct:subject br:RBACE94 .
+
+ds:133531da-0f04-42f4-b6d7-5b6c923b4fe1 a dcat:Dataset ;
+    dct:identifier "133531da-0f04-42f4-b6d7-5b6c923b4fe1" ;
+    dct:title "Aeronaves - Empresas Brasileiras Certificadas para fabricação de Produtos Aeronáuticos"@pt-BR ;
+    dct:publisher "agencia-nacional-de-aviacao-civil-anac" ;
+    dcat:landingPage <https://dados.gov.br/dados/conjuntos-dados/aeronaves-empresas-brasileiras-certificadas-para-fabricacao-de-produtos-aeronauticos> ;
+    dct:subject br:BID .
+
+ds:b738a347-d6ea-4da0-a8f2-2d450ef2793a a dcat:Dataset ;
+    dct:identifier "b738a347-d6ea-4da0-a8f2-2d450ef2793a" ;
+    dct:title "Rol de Informações Classificadas e Desclassificadas em Grau de Sigilo"@pt-BR ;
+    dct:publisher "controladoria-geral-da-uniao" ;
+    dcat:landingPage <https://dados.gov.br/dados/conjuntos-dados/rol-de-informacoes-desclassificadas-e-classificadas-em-grau-de-sigilo> ;
+    dct:subject br:LAI .
+
+ds:5478f378-3f22-476b-9df3-b695918b0f4f a dcat:Dataset ;
+    dct:identifier "5478f378-3f22-476b-9df3-b695918b0f4f" ;
+    dct:title "Rede Maregráfica Permanente para Geodésia - Relatório de Informação de Estação"@pt-BR ;
+    dct:publisher "controladoria-geral-da-uniao" ;
+    dcat:landingPage <https://dados.gov.br/dados/conjuntos-dados/cged_rmpg> ;
+    dct:subject br:SIRGAS2000 .
+
+ds:aef9ec75-a1ef-4eb7-80a5-48fd34d402b6 a dcat:Dataset ;
+    dct:identifier "aef9ec75-a1ef-4eb7-80a5-48fd34d402b6" ;
+    dct:title "Catálogo da Indústria Espacial Brasileira"@pt-BR ;
+    dct:publisher "controladoria-geral-da-uniao" ;
+    dcat:landingPage <https://dados.gov.br/dados/conjuntos-dados/catalogo-industria-espacial> ;
+    dct:subject br:BID .
+
+ds:21b132ed-db3a-4dd6-82ef-b01fc981ab12 a dcat:Dataset ;
+    dct:identifier "21b132ed-db3a-4dd6-82ef-b01fc981ab12" ;
+    dct:title "Barragens de Mineração"@pt-BR ;
+    dct:publisher "controladoria-geral-da-uniao" ;
+    dcat:landingPage <https://dados.gov.br/dados/conjuntos-dados/barragens-de-mineracao> ;
+    dct:subject br:PFM .

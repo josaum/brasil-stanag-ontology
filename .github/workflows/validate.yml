@@ -6,5 +6,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v5
+      - name: Regenerar a partir dos CSV e conferir que nada mudou
+        run: |
+          python3 scripts/build.py
+          git diff --exit-code ontology/generated docs/mapeamentos.md lean/Invariantes.lean
       - run: uv run python scripts/validate.py
-      - run: git diff --exit-code docs/mapeamentos.md
+  lean:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Instalar Lean (elan)
+        run: |
+          curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+      - name: Verificar invariantes
+        working-directory: lean
+        run: lean Invariantes.lean
